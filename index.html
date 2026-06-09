@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma Serena - Astrología y Bienestar</title>
-    <!-- Fuentes Elegantes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
@@ -17,48 +16,47 @@
             --oscuro: #2c2541;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Jost', sans-serif; background-color: var(--crema); color: var(--cosmico); overflow-x: hidden; }
+        body { font-family: 'Jost', sans-serif; background-color: var(--crema); color: var(--cosmico); overflow-x: hidden; padding-bottom: 60px; }
         header { background: var(--cosmico); padding: 20px; text-align: center; color: white; position: relative; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
         .logo { font-size: 32px; font-weight: bold; letter-spacing: 2px; color: var(--crema); }
         .nav-links { margin-top: 15px; display: flex; justify-content: center; gap: 20px; }
         .nav-links a { color: var(--lavanda); text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* Botón Admin */
         .btn-admin { position: absolute; top: 20px; right: 20px; background: transparent; border: 1px solid var(--lavanda); color: var(--lavanda); padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; }
         
         .hero { padding: 80px 20px; text-align: center; background: linear-gradient(to bottom, var(--cosmico), var(--oscuro)); color: white; }
         .hero h2 { font-size: 45px; margin-bottom: 15px; color: var(--oro); }
         .hero p { max-width: 600px; margin: 0 auto 25px; font-size: 18px; color: var(--crema); opacity: 0.9; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .section-title { text-align: center; font-size: 36px; margin-bottom: 40px; position: relative; padding-bottom: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
         .section-title::after { content: ''; width: 60px; height: 2px; background: var(--oro); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-        /* Grid general */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.03); display: flex; flex-direction: column; transition: 0.3s; position: relative; }
         .card:hover { transform: translateY(-5px); }
-        .card-img { height: 200px; background-size: cover; background-position: center; position: relative; }
+        .card-img { height: 200px; background-size: cover; background-position: center; position: relative; background-color: #e0e0e0; }
         .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
         .card-tag { font-size: 11px; text-transform: uppercase; color: var(--lavanda); font-weight: bold; margin-bottom: 10px; letter-spacing: 1px; }
         .card-title { font-size: 24px; margin-bottom: 10px; }
         .card-desc { font-size: 15px; color: #666; margin-bottom: 20px; line-height: 1.6; }
         .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid #eee; padding-top: 15px; }
         .price { font-size: 22px; font-weight: bold; color: var(--cosmico); }
-        .btn-buy { background: var(--cosmico); color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold; transition: 0.3s; }
-        .btn-buy:hover { background: var(--lavanda); color: var(--cosmico); }
+        .btn-buy { background: var(--cosmico); color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold; transition: 0.3s; text-align: center; }
+        
+        /* Controles de Edición */
+        .edit-field { display: none; width: 100%; margin-top: 5px; padding: 6px; border: 1px solid var(--lavanda); border-radius: 4px; font-family: sans-serif; font-size: 13px; }
+        .edit-img-btn { display: none; position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; border: none; padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; z-index: 10; }
+        .btn-eliminar { display: none; position: absolute; top: 10px; right: 10px; background: #ff4d4d; color: white; border: none; padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; z-index: 10; font-weight: bold; }
+        
+        .area-agregar { text-align: center; margin: 20px 0 40px; display: none; }
+        .btn-agregar { background: #27ae60; color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-agregar:hover { background: #219653; transform: scale(1.05); }
 
-        /* Input de edición oculto por defecto */
-        .edit-field { display: none; width: 100%; margin-top: 5px; padding: 5px; border: 1px solid var(--lavanda); border-radius: 4px; font-family: sans-serif; font-size: 13px; }
-        .edit-img-btn { display: none; position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; border: none; padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; }
 
-        /* Botón de WhatsApp Flotante */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #20ba5a; }
-
-        /* Panel de Control flotante inferior */
-        #admin-panel { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--cosmico); color: white; padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.2); }
+        #admin-panel { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--cosmico); color: white; padding: 15px; text-align: center; z-index: 1000; }
         #admin-panel button { background: var(--oro); border: none; color: var(--cosmico); padding: 8px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-left: 15px; }
     </style>
 </head>
@@ -67,10 +65,7 @@
     <header>
         <div class="logo">ALMA SERENA</div>
         <div class="nav-links">
-            <a href="#cursos">Cursos</a>
-            <a href="#rituales">Rituales</a>
-            <a href="#ebooks">Ebooks</a>
-            <a href="#blog">Blog</a>
+            <a href="#productos-seccion">Mis Productos y Formaciones</a>
         </div>
         <button class="btn-admin" onclick="ingresarAdmin()">🔑 Editar Web</button>
     </header>
@@ -80,188 +75,130 @@
         <p id="hero-subtitle">Descubre formaciones, rituales guiados y herramientas energéticas para conectar con tu sabiduría interior.</p>
     </section>
 
-    <!-- SECCIÓN CURSOS -->
-    <section id="cursos" class="container">
-        <h2 class="section-title">Programas & Cursos Online</h2>
-        <div class="grid" id="grid-cursos">
-            <!-- Curso 1 -->
-            <div class="card" data-id="curso1">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=500')">
-                    <button class="edit-img-btn" onclick="cambiarImagen(this)">🖼️ Cambiar Foto</button>
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">Astrología</span>
-                    <h3 class="card-title" id="t-curso1">Formación Profesional en Astrología</h3>
-                    <input type="text" class="edit-field" value="Formación Profesional en Astrología" oninput="actualizarTexto('t-curso1', this.value)">
-                    
-                    <p class="card-desc" id="d-curso1">Un viaje completo desde los conceptos básicos hasta la interpretación avanzada de la carta natal.</p>
-                    <textarea class="edit-field" oninput="actualizarTexto('d-curso1', this.value)">Un viaje completo desde los conceptos básicos hasta la interpretación avanzada de la carta natal.</textarea>
-                    
-                    <div class="card-footer">
-                        <div>
-                            <span class="price" id="p-curso1">$97 USD</span>
-                            <input type="text" class="edit-field" value="$97 USD" oninput="actualizarTexto('p-curso1', this.value)">
-                        </div>
-                        <a href="https://hotmart.com" target="_blank" class="btn-buy" id="l-curso1">Inscribirse</a>
-                        <input type="text" class="edit-field" placeholder="Pegar Link de Hotmart" value="https://hotmart.com" oninput="actualizarLink('l-curso1', this.value)">
-                    </div>
-                </div>
-            </div>
+    <section id="productos-seccion" class="container">
+        <h2 class="section-title">Catálogo Completo de Alquimia</h2>
+        
+        <!-- Botón para añadir nuevos elementos (solo visible para admin) -->
+        <div class="area-agregar" id="area-agregar-btn">
+            <button class="btn-agregar" onclick="crearNuevoProducto()">➕ Agregar Nuevo Producto / Curso</button>
+        </div>
+
+        <div class="grid" id="contenedor-productos">
+            <!-- Los productos se cargarán dinámicamente aquí -->
         </div>
     </section>
 
-    <!-- SECCIÓN RITUALES & VIDEOS -->
-    <section id="rituales" style="background: #f1ede2;">
-        <div class="container">
-            <h2 class="section-title">Rituales Alquímicos & Videos</h2>
-            <div class="grid" id="grid-rituales">
-                <div class="card" data-id="ritual1">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500')">
-                        <button class="edit-img-btn" onclick="cambiarImagen(this)">🖼️ Cambiar Foto</button>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-tag">Magia Práctica</span>
-                        <h3 class="card-title" id="t-ritual1">Ritual de Manifestación de Luna Llena</h3>
-                        <input type="text" class="edit-field" value="Ritual de Manifestación de Luna Llena" oninput="actualizarTexto('t-ritual1', this.value)">
-                        
-                        <p class="card-desc" id="d-ritual1">Explicación paso a paso: Enciende una vela blanca, escribe tus intenciones de liberación y visualiza con fuerza...</p>
-                        <textarea class="edit-field" oninput="actualizarTexto('d-ritual1', this.value)">Explicación paso a paso: Enciende una vela blanca, escribe tus intenciones de liberación y visualiza con fuerza...</textarea>
-                        
-                        <div class="card-footer">
-                            <a href="https://youtube.com" target="_blank" class="btn-buy" id="l-ritual1" style="background: var(--lavanda); color: var(--cosmico);">Ver Video Explicativo</a>
-                            <input type="text" class="edit-field" placeholder="Link del Video" value="https://youtube.com" oninput="actualizarLink('l-ritual1', this.value)">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN EBOOKS -->
-    <section id="ebooks" class="container">
-        <h2 class="section-title">Ebooks, Promociones & Regalos</h2>
-        <div class="grid" id="grid-ebooks">
-            <div class="card" data-id="ebook1">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500')">
-                    <button class="edit-img-btn" onclick="cambiarImagen(this)">🖼️ Cambiar Foto</button>
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">Regalo / Ebook</span>
-                    <h3 class="card-title" id="t-ebook1">Guía Introductoria a los Tránsitos</h3>
-                    <input type="text" class="edit-field" value="Guía Introductoria a los Tránsitos" oninput="actualizarTexto('t-ebook1', this.value)">
-                    
-                    <p class="card-desc" id="d-ebook1">Descarga completamente gratis nuestra guía para entender cómo te afectan los planetas esta semana.</p>
-                    <textarea class="edit-field" oninput="actualizarTexto('d-ebook1', this.value)">Descarga completamente gratis nuestra guía para entender cómo te afectan los planetas esta semana.</textarea>
-                    
-                    <div class="card-footer">
-                        <div>
-                            <span class="price" id="p-ebook1">¡GRATIS!</span>
-                            <input type="text" class="edit-field" value="¡GRATIS!" oninput="actualizarTexto('p-ebook1', this.value)">
-                        </div>
-                        <a href="#" class="btn-buy" id="l-ebook1">Descargar</a>
-                        <input type="text" class="edit-field" placeholder="Link de descarga o Hotmart" value="#" oninput="actualizarLink('l-ebook1', this.value)">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PANEL DE CONTROL FLOTANTE -->
     <div id="admin-panel">
-        <span>🛠️ Modo Editor Activo. Cambia los textos o links directamente en las cajas.</span>
+        <span>🛠️ Modo Editor Activo. ¡Crea, edita o elimina productos directamente!</span>
         <button onclick="guardarCambios()">💾 Guardar Todo</button>
     </div>
 
-    <!-- BOTÓN DE WHATSAPP FLOTANTE -->
     <a href="https://wa.me/5493425683418?text=Hola!%20Me%20gustaría%20obtener%20más%20información." class="whatsapp-float" target="_blank">
         <svg style="width:30px;height:30px;fill:white;vertical-align:middle" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.135-1.347a9.94 9.94 0 0 0 4.873 1.277h.005c5.505 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062A9.923 9.923 0 0 0 12.012 2zm5.726 14.12c-.25.704-1.235 1.293-1.705 1.342-.435.044-.997.058-2.647-.624a10.96 10.96 0 0 1-4.577-4.043c-.615-.818-1.041-1.802-1.041-2.825 0-1.268.665-1.892.903-2.14.238-.248.53-.31.704-.31a.417.417 0 0 1 .403.242c.174.417.585 1.433.636 1.539.05.105.084.23.013.37-.07.14-.146.242-.258.373-.112.13-.234.29-.334.39-.11.11-.227.23-.098.452a8.04 8.04 0 0 0 1.5 1.861 7.3 7.3 0 0 0 2.164 1.332c.22.11.35.093.479-.056.128-.15.556-.648.704-.87.147-.22.296-.184.5-.11.204.075 1.298.613 1.52.724.223.111.372.167.428.263.056.096.056.554-.194 1.258z"/></svg>
     </a>
 
     <script>
         let esAdmin = false;
+        
+        let productos = [
+            { id: "p1", tag: "Astrología", titulo: "Formación en Astrología", desc: "Un viaje completo desde los conceptos básicos hasta la interpretación avanzada.", precio: "$97 USD", link: "https://hotmart.com", img: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=500" },
+            { id: "p2", tag: "Ritual", titulo: "Ritual de Luna Llena", desc: "Guía paso a paso para encender tu poder interior y manifestar intenciones.", precio: "¡Gratis!", link: "https://youtube.com", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" }
+        ];
 
-        // Cargar datos guardados al entrar a la web
         window.onload = function() {
-            if(localStorage.getItem('almaSerena_datos')) {
-                const datos = JSON.parse(localStorage.getItem('almaSerena_datos'));
-                Object.keys(datos.textos).forEach(id => {
-                    const el = document.getElementById(id);
-                    if(el) {
-                        el.innerText = datos.textos[id];
-                        // Si tiene un input al lado, actualizar su valor inicial
-                        if(el.nextElementSibling && el.nextElementSibling.classList.contains('edit-field')) {
-                            el.nextElementSibling.value = datos.textos[id];
-                        }
-                    }
-                });
-                Object.keys(datos.links).forEach(id => {
-                    const el = document.getElementById(id);
-                    if(el) {
-                        el.href = datos.links[id];
-                        // Si es el link, el segundo input hermano tiene el valor
-                        const inputs = el.parentElement.querySelectorAll('.edit-field');
-                        if(inputs.length > 0) inputs[inputs.length - 1].value = datos.links[id];
-                    }
-                });
-                Object.keys(datos.imagenes).forEach(id => {
-                    const el = document.querySelector(`[data-id="${id}"] .card-img`);
-                    if(el) el.style.backgroundImage = `url('${datos.imagenes[id]}')`;
-                });
+            if(localStorage.getItem('almaSerena_lista_productos')) {
+                productos = JSON.parse(localStorage.getItem('almaSerena_lista_productos'));
             }
+            renderizarProductos();
+        };
+
+        function renderizarProductos() {
+            const contenedor = document.getElementById('contenedor-productos');
+            contenedor.innerHTML = '';
+            
+            productos.forEach((p, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img" style="background-image: url('${p.img}')">
+                        <button class="edit-img-btn" style="display: ${esAdmin ? 'block' : 'none'}" onclick="cambiarImagen(${index})">🖼️ Cambiar Foto</button>
+                        <button class="btn-eliminar" style="display: ${esAdmin ? 'block' : 'none'}" onclick="eliminarProducto(${index})">❌ Eliminar</button>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">${p.tag}</span>
+                        <h3 class="card-title">${p.titulo}</h3>
+                        <input type="text" class="edit-field" style="display: ${esAdmin ? 'block' : 'none'}" value="${p.titulo}" oninput="actualizarFaux(${index}, 'titulo', this.value)">
+                        
+                        <p class="card-desc">${p.desc}</p>
+                        <textarea class="edit-field" style="display: ${esAdmin ? 'block' : 'none'}" oninput="actualizarFaux(${index}, 'desc', this.value)">${p.desc}</textarea>
+                        
+                        <div class="card-footer">
+                            <div>
+                                <span class="price">${p.precio}</span>
+                                <input type="text" class="edit-field" style="display: ${esAdmin ? 'block' : 'none'}" value="${p.precio}" oninput="actualizarFaux(${index}, 'precio', this.value)">
+                            </div>
+                            <a href="${p.link}" target="_blank" class="btn-buy">Ver Más</a>
+                            <input type="text" class="edit-field" style="display: ${esAdmin ? 'block' : 'none'}" placeholder="Link de Hotmart/Video" value="${p.link}" oninput="actualizarFaux(${index}, 'link', this.value)">
+                        </div>
+                    </div>
+                `;
+                contenedor.appendChild(card);
+            });
+        }
+
+        function actualizarFaux(index, campo, valor) {
+            productos[index][campo] = valor;
         }
 
         function ingresarAdmin() {
             const pass = prompt("Ingresa tu contraseña de administradora:");
-            if(pass === "admin123") { // Podés cambiar esta contraseña por la que quieras
+            if(pass === "AlquimiaS4rena2026!") {
                 esAdmin = true;
                 document.getElementById('admin-panel').style.display = 'block';
-                document.querySelectorAll('.edit-field, .edit-img-btn').forEach(el => el.style.display = 'block');
-                alert("¡Modo edición activado! Escribí los cambios en las cajas que aparecieron.");
+                document.getElementById('area-agregar-btn').style.display = 'block';
+                renderizarProductos();
+                alert("¡Modo edición activo! Ahora podés agregar más productos con el botón verde o editar los actuales.");
             } else {
-                alert("Contraseña incorrecta. Solo acceso disponible para administración.");
+                alert("Contraseña incorrecta.");
             }
         }
 
-        function actualizarTexto(id, valor) {
-            document.getElementById(id).innerText = valor;
+        function crearNuevoProducto() {
+            const nuevo = {
+                id: "p_" + Date.now(),
+                tag: "Nuevo",
+                titulo: "Título del Producto Nuevo",
+                desc: "Hacé clic en editar para cambiar esta descripción corta.",
+                precio: "$0 USD",
+                link: "#",
+                img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500"
+            };
+            productos.push(nuevo);
+            renderizarProductos();
         }
 
-        function actualizarLink(id, valor) {
-            document.getElementById(id).href = valor;
+        function eliminarProducto(index) {
+            if(confirm("¿Segura que querés eliminar este producto?")) {
+                productos.splice(index, 1);
+                renderizarProductos();
+            }
         }
 
-        function cambiarImagen(btn) {
-            const nuevaUrl = prompt("Pega el enlace (URL) de la nueva imagen:");
-            if(nuevaUrl) {
-                btn.parentElement.style.backgroundImage = `url('${nuevaUrl}')`;
+        function cambiarImagen(index) {
+            const url = prompt("Pegá el enlace de la imagen de Unsplash o Hotmart:");
+            if(url) {
+                productos[index].img = url;
+                renderizarProductos();
             }
         }
 
         function guardarCambios() {
-            const datos = { textos: {}, links: {}, imagenes: {} };
-            
-            // Guardar todos los textos modificados
-            document.querySelectorAll('.card-title, .card-desc, .price').forEach(el => {
-                datos.textos[el.id] = el.innerText;
-            });
-            // Guardar links de hotmart o videos
-            document.querySelectorAll('.btn-buy').forEach(el => {
-                datos.links[el.id] = el.href;
-            });
-            // Guardar imágenes
-            document.querySelectorAll('.card').forEach(el => {
-                const imgDiv = el.querySelector('.card-img');
-                const url = imgDiv.style.backgroundImage.replace('url("', '').replace('")', '');
-                datos.imagenes[el.dataset.id] = url;
-            });
-
-            localStorage.setItem('almaSerena_datos', JSON.stringify(datos));
-            
-            // Salir del modo editor
-            document.getElementById('admin-panel').style.display = 'none';
-            document.querySelectorAll('.edit-field, .edit-img-btn').forEach(el => el.style.display = 'none');
+            localStorage.setItem('almaSerena_lista_productos', JSON.stringify(productos));
             esAdmin = false;
-            alert("¡Cambios guardados con éxito en tu navegador!");
+            document.getElementById('admin-panel').style.display = 'none';
+            document.getElementById('area-agregar-btn').style.display = 'none';
+            renderizarProductos();
+            alert("¡Todos tus productos han sido guardados con éxito en tu catálogo!");
         }
     </script>
 </body>
