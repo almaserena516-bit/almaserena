@@ -78,7 +78,6 @@
     <section id="productos-seccion" class="container">
         <h2 class="section-title">Catálogo Completo de Alquimia</h2>
         
-        <!-- Botón para añadir nuevos elementos (solo visible para admin) -->
         <div class="area-agregar" id="area-agregar-btn">
             <button class="btn-agregar" onclick="crearNuevoProducto()">➕ Agregar Nuevo Producto / Curso</button>
         </div>
@@ -157,7 +156,7 @@
                 document.getElementById('admin-panel').style.display = 'block';
                 document.getElementById('area-agregar-btn').style.display = 'block';
                 renderizarProductos();
-                alert("¡Modo edición activo! Ahora podés agregar más productos con el botón verde o editar los actuales.");
+                alert("¡Modo edición activo! Ahora podés agregar más productos con el botón verde.");
             } else {
                 alert("Contraseña incorrecta.");
             }
@@ -185,7 +184,7 @@
         }
 
         function cambiarImagen(index) {
-            const url = prompt("Pegá el enlace de la imagen de Unsplash o Hotmart:");
+            const url = prompt("Pegá el enlace de la imagen:");
             if(url) {
                 productos[index].img = url;
                 renderizarProductos();
@@ -198,7 +197,7 @@
             document.getElementById('admin-panel').style.display = 'none';
             document.getElementById('area-agregar-btn').style.display = 'none';
             renderizarProductos();
-            alert("¡Todos tus productos han sido guardados con éxito en tu catálogo!");
+            alert("¡Todos tus productos han sido guardados con éxito!");
         }
     </script>
 </body>
