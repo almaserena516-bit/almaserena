@@ -17,12 +17,21 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Jost', sans-serif; background-color: var(--crema); color: var(--cosmico); overflow-x: hidden; padding-bottom: 60px; line-height: 1.6; }
-        header { background: var(--cosmico); padding: 25px 20px; text-align: center; color: white; position: relative; }
+        
+        /* Ajuste de Header para el traductor */
+        header { background: var(--cosmico); padding: 25px 20px; text-align: center; color: white; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
         .logo { font-size: 34px; font-weight: bold; letter-spacing: 3px; color: var(--crema); }
         
-        .btn-admin { position: absolute; top: 25px; right: 20px; background: transparent; border: 1px solid var(--lavanda); color: var(--lavanda); padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; transition: 0.3s; }
+        .header-controls { display: flex; gap: 15px; align-items: center; justify-content: center; margin-top: 5px; }
+        .btn-admin { background: transparent; border: 1px solid var(--lavanda); color: var(--lavanda); padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; transition: 0.3s; }
         .btn-admin:hover { background: var(--lavanda); color: var(--cosmico); }
+        
+        /* Estilos para ocultar la barra fea de Google Translate y personalizar el combo */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        #google_translate_element select { background: rgba(255,255,255,0.1); color: var(--crema); border: 1px solid var(--lavanda); padding: 6px 10px; border-radius: 5px; font-family: 'Jost', sans-serif; font-size: 12px; cursor: pointer; outline: none; }
+        #google_translate_element select option { background: var(--cosmico); color: white; }
         
         .hero { padding: 100px 20px; text-align: center; background: linear-gradient(to bottom, var(--cosmico), var(--oscuro)); color: white; position: relative; }
         .hero h2 { font-size: 50px; margin-bottom: 20px; color: var(--oro); letter-spacing: 1px; }
@@ -112,7 +121,11 @@
 
     <header>
         <div class="logo">ALMA SERENA</div>
-        <button class="btn-admin" onclick="ingresarAdmin()">🔑 Editar Web</button>
+        <div class="header-controls">
+            <!-- CONTENEDOR DEL TRADUCTOR DE IDIOMA -->
+            <div id="google_translate_element"></div>
+            <button class="btn-admin" onclick="ingresarAdmin()">🔑 Editar Web</button>
+        </div>
     </header>
 
     <section class="hero">
@@ -133,7 +146,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN SOBRE MÍ ACTUALIZADA -->
+    <!-- SECCIÓN SOBRE MÍ -->
     <section class="about-section">
         <div class="about-container">
             <div class="about-img"></div>
@@ -243,7 +256,7 @@
         <button onclick="guardarCambios()">💾 Guardar Todo</button>
     </div>
 
-    <!-- WhatsApp Flotante Optimizado con Requisitos Inmediatos -->
+    <!-- WhatsApp Flotante Optimizado -->
     <a href="https://wa.me/5493425683418?text=Hola!%20Realic%C3%A9%20mi%20compra%20en%20Alma%20Serena%20y%20adjunto%20mi%20comprobante.%20Vengo%20a%20solicitar%20mi%20Ebook%20Personalizado%20(M%C3%A1x.%2030%20p%C3%A1g.%20en%20PDF).%20Entiendo%20que%20la%20entrega%20demora%20de%2024%20a%2096%20hs%20seg%C3%BAn%20la%20construcci%C3%B3n%20del%20pedido.%20El%20TEMA%20ESPEC%C3%8DFICO%20que%20solicito%20es:%20____________________%20y%20el%20IDIOMA%20es:%20____________________" class="whatsapp-float" target="_blank">
         <svg style="width:30px;height:30px;fill:white;vertical-align:middle" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.135-1.347a9.94 9.94 0 0 0 4.873 1.277h.005c5.505 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062A9.923 9.923 0 0 0 12.012 2zm5.726 14.12c-.25.704-1.235 1.293-1.705 1.342-.435.044-.997.058-2.647-.624a10.96 10.96 0 0 1-4.577-4.043c-.615-.818-1.041-1.802-1.041-2.825 0-1.268.665-1.892.903-2.14.238-.248.53-.31.704-.31a.417.417 0 0 1 .403.242c.174.417.585 1.433.636 1.539.05.105.084.23.013.37-.07.14-.146.242-.258.373-.112.13-.234.29-.334.39-.11.11-.227.23-.098.452a8.04 8.04 0 0 0 1.5 1.861 7.3 7.3 0 0 0 2.164 1.332c.22.11.35.093.479-.056.128-.15.556-.648.704-.87.147-.22.296-.184.5-.11.204.075 1.298.613 1.52.724.223.111.372.167.428.263.056.096.056.554-.194 1.258z"/></svg>
     </a>
@@ -258,6 +271,18 @@
         </p>
     </footer>
 
+    <!-- SCRIPTS DE GOOGLE TRANSLATE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es,pt,it,fr,de', // Idiomas disponibles (Inglés, Español, Portugués, Italiano, Francés, Alemán)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <script>
         let esAdmin = false;
         
@@ -271,7 +296,6 @@
             { id: "g1", tag: "Ritual Gratis", titulo: "Guía de Altar Lunar", desc: "Aprende a configurar tu propio espacio sagrado para intencionar en Luna Nueva.", precio: "¡Gratis!", link: "https://youtube.com", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" }
         ];
 
-        // LÓGICA DEL TURNERO DIARIO AUTOMÁTICO
         const TOTAL_CUPOS = 5;
         let cuposDisponibles = TOTAL_CUPOS;
 
