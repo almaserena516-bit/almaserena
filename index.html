@@ -3,488 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alma Serena - Astrología y Bienestar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Alma Serena | Cursos y Ebooks Espirituales</title>
+    <meta name="description" content="Cursos espirituales, ebooks personalizados y rituales guiados para alinear tu energía. Compra directa con Hotmart.">
     <style>
-        :root {
-            --cosmico: #1a1235;
-            --lavanda: #b7a1d3;
-            --oro: #cbd29a;
-            --crema: #f9f7f1;
-            --oscuro: #2c2541;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Jost', sans-serif; background-color: var(--crema); color: var(--cosmico); overflow-x: hidden; padding-bottom: 60px; line-height: 1.6; }
-        
-        /* Ajuste de Header para el traductor */
-        header { background: var(--cosmico); padding: 25px 20px; text-align: center; color: white; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-        .logo { font-size: 34px; font-weight: bold; letter-spacing: 3px; color: var(--crema); }
-        
-        .header-controls { display: flex; gap: 15px; align-items: center; justify-content: center; margin-top: 5px; }
-        .btn-admin { background: transparent; border: 1px solid var(--lavanda); color: var(--lavanda); padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; transition: 0.3s; }
-        .btn-admin:hover { background: var(--lavanda); color: var(--cosmico); }
-        
-        /* Estilos para ocultar la barra fea de Google Translate y personalizar el combo */
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; }
-        #google_translate_element select { background: rgba(255,255,255,0.1); color: var(--crema); border: 1px solid var(--lavanda); padding: 6px 10px; border-radius: 5px; font-family: 'Jost', sans-serif; font-size: 12px; cursor: pointer; outline: none; }
-        #google_translate_element select option { background: var(--cosmico); color: white; }
-        
-        .hero { padding: 100px 20px; text-align: center; background: linear-gradient(to bottom, var(--cosmico), var(--oscuro)); color: white; position: relative; }
-        .hero h2 { font-size: 50px; margin-bottom: 20px; color: var(--oro); letter-spacing: 1px; }
-        .hero p { max-width: 650px; margin: 0 auto 25px; font-size: 19px; color: var(--crema); opacity: 0.9; font-weight: 300; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .section-title { text-align: center; font-size: 40px; margin-bottom: 40px; position: relative; padding-bottom: 15px; color: var(--cosmico); }
-        .section-title::after { content: ''; width: 60px; height: 2px; background: var(--oro); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-
-        /* SECCIÓN TURNERO AUTOMÁTICO */
-        .turnero-box { background: #fff; border: 1px solid var(--lavanda); border-radius: 16px; padding: 35px; text-align: center; box-shadow: 0 10px 30px rgba(26,18,53,0.05); margin-bottom: 50px; }
-        .turnero-box h3 { font-size: 32px; color: var(--cosmico); margin-bottom: 10px; }
-        .slots-counter { font-size: 20px; margin: 15px 0; color: #e74c3c; font-weight: bold; }
-        .slots-number { font-size: 36px; background: #e74c3c; color: white; padding: 2px 15px; border-radius: 8px; margin: 0 5px; display: inline-block; }
-        .btn-turno { background: var(--cosmico); color: white; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; }
-        .btn-turno:hover { background: var(--lavanda); color: var(--cosmico); }
-        .btn-turno.agotado { background: #7f8c8d; cursor: not-allowed; }
-
-        /* Sección Sobre Mí */
-        .about-section { background-color: #f1ede2; padding: 60px 20px; }
-        .about-container { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
-        .about-img { width: 250px; height: 250px; border-radius: 50%; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400') center/cover; border: 4px solid var(--oro); margin: 0 auto; }
-        .about-text { flex: 1; min-width: 300px; text-align: left; }
-        .about-text h3 { font-size: 32px; margin-bottom: 15px; color: var(--cosmico); }
-
-        /* SECCIÓN REGALO EBOOK REVISADA */
-        .promo-ebook-box { background: linear-gradient(135deg, var(--oscuro), #3d325c); color: white; padding: 45px 30px; border-radius: 16px; margin-bottom: 50px; border: 2px dashed var(--oro); text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .promo-ebook-box h3 { font-size: 36px; color: var(--oro); margin-bottom: 15px; }
-        .promo-ebook-box p { max-width: 800px; margin: 0 auto 15px; font-size: 16px; opacity: 0.95; }
-        .condicion-compra { font-size: 18px; font-weight: bold; color: #ffeb3b; background: rgba(255,235,59,0.1); padding: 8px 15px; border-radius: 8px; display: inline-block; margin: 15px 0; border: 1px solid rgba(255,235,59,0.3); }
-        .temas-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; padding: 0; list-style: none; }
-        .temas-list li { background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 20px; font-size: 14px; border: 1px solid var(--lavanda); color: var(--crema); }
-        .badge-gratis { background: #e74c3c; color: white; padding: 4px 10px; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 12px; display: inline-block; vertical-align: middle; margin-left: 10px; }
-
-        /* BLOQUE VISUAL: DECLARACIÓN ÉTICA ESTRICTA */
-        .advertencia-etica-box { background: #fff5f5; border: 2px solid #e74c3c; border-radius: 12px; padding: 30px; margin: 40px auto; max-width: 900px; text-align: left; box-shadow: 0 8px 20px rgba(231,76,60,0.08); }
-        .advertencia-etica-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #c0392b; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .advertencia-etica-box p { font-size: 15px; color: #333; margin-bottom: 15px; font-weight: 400; }
-        .advertencia-puntos { list-style: none; padding: 0; }
-        .advertencia-puntos li { margin-bottom: 12px; font-size: 15px; padding-left: 25px; position: relative; color: #444; }
-        .advertencia-puntos li::before { content: '❌'; position: absolute; left: 0; top: 2px; font-size: 12px; }
-        .enfoque-positivo { background: #e8f8f5; border-left: 4px solid #2cc19a; padding: 15px; border-radius: 4px; margin-top: 15px; font-weight: 500; color: #117a65; }
-
-        /* Grid General */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-bottom: 50px; }
-        .card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(26,18,53,0.05); display: flex; flex-direction: column; transition: 0.3s; position: relative; border: 1px solid rgba(183,161,211,0.1); }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(26,18,53,0.1); }
-        .card-img { height: 220px; background-size: cover; background-position: center; position: relative; background-color: #e0e0e0; }
-        .card-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-tag { font-size: 11px; text-transform: uppercase; color: #8e74ae; font-weight: 600; margin-bottom: 10px; letter-spacing: 1.5px; }
-        .card-title { font-size: 26px; margin-bottom: 12px; color: var(--cosmico); font-weight: 600; }
-        .card-desc { font-size: 15px; color: #555; margin-bottom: 25px; line-height: 1.6; }
-        .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid #f0ebf7; padding-top: 20px; }
-        .price { font-size: 24px; font-weight: bold; color: var(--cosmico); }
-        
-        .btn-buy { background: var(--cosmico); color: white; padding: 10px 22px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.3s; text-align: center; border: 1px solid var(--cosmico); }
-        .btn-buy:hover { background: transparent; color: var(--cosmico); }
-        .btn-download { background: #27ae60; border-color: #27ae60; }
-        .btn-download:hover { background: transparent; color: #27ae60; }
-        
-        /* Sección Testimonios */
-        .testimonials { background: var(--oscuro); color: white; padding: 60px 20px; text-align: center; }
-        .testimonials h2 { color: var(--oro); }
-        .testimonial-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1000px; margin: 40px auto 0; }
-        .testimonial-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; flex: 1; min-width: 280px; max-width: 450px; border-left: 3px solid var(--oro); text-align: left; }
-        .testimonial-card p { font-style: italic; font-size: 15px; opacity: 0.9; margin-bottom: 15px; }
-        .testimonial-card span { font-size: 13px; color: var(--lavanda); font-weight: bold; display: block; }
-
-        /* Controles de Edición */
-        .edit-field { display: none; width: 100%; margin: 8px 0; padding: 8px; border: 1px solid var(--lavanda); border-radius: 4px; font-family: 'Jost', sans-serif; font-size: 13px; }
-        .edit-img-btn { display: none; position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; border: none; padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; z-index: 10; }
-        .btn-eliminar { display: none; position: absolute; top: 10px; right: 10px; background: #ff4d4d; color: white; border: none; padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; z-index: 10; font-weight: bold; }
-        
-        .area-agregar { text-align: center; margin: 10px 0 40px; display: none; }
-        .btn-agregar { background: #27ae60; color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 5px; }
-
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #20ba5a; }
-
-        #admin-panel { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--cosmico); color: white; padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.2); }
-        #admin-panel button { background: var(--oro); border: none; color: var(--cosmico); padding: 8px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-left: 15px; }
-        
-        footer { background: #110b24; color: white; text-align: center; padding: 30px 20px; font-size: 14px; opacity: 0.8; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fefaf5;
+            color: #2c2418;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #f9f1e8 0%, #fefaf5 100%);
+            border-radius: 0 0 30px 30px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #5c3d2e;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #7a5a4a;
+            margin-top: 0.5rem;
+        }
+        .cupos {
+            background-color: #f0e3d4;
+            border-left: 6px solid #d4a373;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #5c3d2e;
+            margin: 2rem 0 1rem;
+            text-align: center;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .curso-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 280px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .curso-card:hover {
+            transform: translateY(-5px);
+        }
+        .curso-card h3 {
+            font-size: 1.4rem;
+            color: #5c3d2e;
+            margin: 0.5rem 0;
+        }
+        .precio {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d4a373;
+            margin: 1rem 0;
+        }
+        .precio small {
+            font-size: 0.8rem;
+            color: #8a7a6a;
+        }
+        .boton-comprar {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.5rem;
+            transition: background 0.3s;
+        }
+        .boton-comprar:hover {
+            background-color: #128C7E;
+        }
+        .boton-detalle {
+            background-color: #d4a373;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .footer-legal {
+            background-color: #f9f5ef;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            border-top: 2px solid #d4b48c;
+            font-size: 0.8rem;
+            color: #4a3b2c;
+        }
+        .boton-wsp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 700px) {
+            .curso-card { width: 100%; }
+            h1 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
+<div class="container">
     <header>
-        <div class="logo">ALMA SERENA</div>
-        <div class="header-controls">
-            <!-- CONTENEDOR DEL TRADUCTOR DE IDIOMA -->
-            <div id="google_translate_element"></div>
-            <button class="btn-admin" onclick="ingresarAdmin()">🔑 Editar Web</button>
-        </div>
+        <h1>🌿 ALMA SERENA</h1>
+        <div class="tagline">Alinea tu Energía con la Sabiduría del Cosmos</div>
+        <p style="margin-top: 1rem;">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas para encender tu poder interior.</p>
     </header>
 
-    <section class="hero">
-        <h2 id="hero-title">Alinea tu Energía con la Sabiduría del Cosmos</h2>
-        <p id="hero-subtitle">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas diseñadas para encender tu poder interior.</p>
-    </section>
-
-    <!-- TURNERO DIARIO AUTOMÁTICO -->
-    <section class="container" style="padding-bottom: 20px;">
-        <div class="turnero-box">
-            <h3>🔮 Agenda de Ayuda Espiritual Inmediata</h3>
-            <p>Para garantizar una máxima dedicación energética, solo abro un número estrictamente limitado de consultas personalizadas al día.</p>
-            <div class="slots-counter">
-                Cupos disponibles para hoy: <span class="slots-number" id="cupos-count">5</span> de 5 restantes
-            </div>
-            <button id="btn-reservar" class="btn-turno" onclick="solicitarTurno()">✨ Reservar mi Consulta de Hoy</button>
-            <p style="font-size: 13px; opacity: 0.6; margin-top: 10px;">🕒 El turnero se reinicia automáticamente todos los días a las 00:00 hs.</p>
-        </div>
-    </section>
-
-    <!-- SECCIÓN SOBRE MÍ -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-img"></div>
-            <div class="about-text">
-                <h3>Bienvenidos a mi espacio de evolución</h3>
-                <p>Soy un buscador y experto en temáticas espirituales, consagrado a guiar a las almas en su proceso de expansión, bienestar integral y evolución financiera. Mi labor se basa en el respeto absoluto por las leyes del plano astral y el uso consciente de la energía.</p>
-                <p style="margin-top: 10px; font-weight: 600; color: #c0392b;">⚠️ Compromiso de Luz:</p>
-                <p style="font-size: 14px; opacity: 0.9;">Entiendo la espiritualidad como un puente hacia la paz y el progreso. Por respeto a mi camino y a quienes confían en mí, poseo el conocimiento pero **jamás realizo ni facilito trabajos oscuros**. Este es un territorio sagrado exclusivo para tu crecimiento y protección.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTAINER PRINCIPAL -->
-    <section class="container">
-        
-        <!-- SECCIÓN: RITUALES Y DESCARGAS GRATIS -->
-        <h2 class="section-title">Rituales y Recursos Gratuitos</h2>
-        <p style="text-align:center; max-width:600px; margin:-20px auto 30px; opacity:0.8;">Disfruta de estas herramientas sin costo para empezar hoy mismo tu camino de conexión energética.</p>
-        
-        <div class="area-agregar" id="area-agregar-gratis-btn">
-            <button class="btn-agregar" style="background:#8e74ae;" onclick="crearNuevoRecursoGratis()">➕ Agregar Recurso Gratis</button>
-        </div>
-        <div class="grid" id="contenedor-gratis">
-            <!-- Las descargas gratis se cargan dinámicamente aquí -->
-        </div>
-
-        <hr style="border:0; height:1px; background:rgba(26,18,53,0.1); margin:60px 0;">
-
-        <!-- SECCIÓN REGALO EXCLUSIVO EBOOK POR COMPRA REVISADA -->
-        <div class="promo-ebook-box">
-            <h3>📖 Regalo Alquímico: Tu Ebook Personalizado + Soporte Permanente <span class="badge-gratis">Gratis</span></h3>
-            <p>Por la adquisición de cualquiera de nuestras formaciones o guías (con un valor promedio mínimo de $35 USD), te obsequiaré un <strong>libro digital en formato PDF escrito a tu total medida</strong>, con la explicación exacta y paso a paso de los rituales en el idioma de tu preferencia.</p>
-            
-            <!-- Especificaciones técnicas y legales del Ebook -->
-            <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px; margin: 20px auto; max-width: 850px; text-align: left; border: 1px solid var(--lavanda);">
-                <p style="color: var(--oro); font-weight: 600; margin-bottom: 10px; font-size: 18px; text-align: center;">⚙️ Especificaciones y Propiedad Intelectual del Ebook:</p>
-                <ul style="list-style: none; padding: 0; font-size: 14.5px; opacity: 0.95; line-height: 1.7;">
-                    <li style="margin-bottom: 8px;">📏 <strong>Extensión Máxima:</strong> Cada obra personalizada tendrá un tope máximo de 30 páginas en formato PDF de alta calidad.</li>
-                    <li style="margin-bottom: 8px;">🛡️ <strong>Sello de Autenticidad:</strong> Cada hoja llevará impreso el sello oficial de <em>Alma Serena</em>. Queda <strong>totalmente prohibida su reproducción total o parcial, distribución o comercialización</strong> sin autorización expresa.</li>
-                    <li style="margin-bottom: 8px;">⚖️ <strong>Uso y Responsabilidad:</strong> El uso y ejecución de los rituales quedan bajo estricta responsabilidad del usuario. En este espacio se te enseñará el camino correcto y se corregirá tu accionar, pero la práctica es un compromiso personal.</li>
-                    <li style="margin-bottom: 8px;">🚫 <strong>Sin Reembolso:</strong> Al tratarse de un servicio digital diseñado exclusivamente a pedido, <u>no se realizan reembolsos ni devoluciones</u> bajo ningún concepto. Por favor, asegúrate de solicitar un tema específico y claro al contactarnos.</li>
-                    <li style="margin-bottom: 8px;">⏳ <strong>Tiempos de Entrega:</strong> La construcción artesanal de tu ebook demora un lapso de <strong>24 a 96 horas hábiles</strong>. Este tiempo varía según la complejidad del tema, la demanda de pedidos y el proceso de canalización requerido para tu caso en pos de entregarte la máxima excelencia.</li>
-                </ul>
-            </div>
-            
-            <p style="color: var(--oro); font-weight: 600;">📱 ¡Acompañamiento Infinito! Todos los ebooks incluyen soporte y mensajería directa por WhatsApp conmigo para guiarte y corregirte en cada paso de tus obras.</p>
-            
-            <div class="condicion-compra">🌟 Válido para cualquier compra con un valor promedio mínimo de $35 USD</div>
-            
-            <p style="font-size: 15px; margin-top: 10px; color: var(--lavanda); font-weight: 600;">¿Qué temáticas podés elegir para tu Ebook Personalizado?</p>
-            <ul class="temas-list">
-                <li>🔮 Volteos de Trabajos Fuertes</li>
-                <li>🛣️ Aperturas de Caminos (Amor, Salud, Éxito)</li>
-                <li>✨ Ayuda Espiritual Guiada</li>
-                <li>🌿 Limpiezas Energéticas del Cuerpo Físico</li>
-                <li>🧂 Rituales de Limpias con Sales</li>
-                <li>🍯 Baños Dulces (Abundancia, Prosperidad y Dinero)</li>
-                <li>🛁 Baños Amargos (Descargas y Liberación)</li>
-                <li>🕯️ Significado Profundo y Lectura de Velas</li>
-            </ul>
-        </div>
-
-        <!-- BLOQUE VISUAL: DECLARACIÓN ÉTICA DE ADVERTENCIA ESPIRITUAL -->
-        <div class="advertencia-etica-box">
-            <h4>⚠️ Declaración Ética de Alma Serena</h4>
-            <p>Como experto con profundo recorrido en el plano astral y de las energías, establezco una postura inquebrantable sobre mi labor espiritual. Por favor, lee atentamente antes de solicitar una consulta o armar tu ebook personalizado:</p>
-            <ul class="advertencia-puntos">
-                <li><strong>1. El accionar y peligrosidad de la baja vibración no es un juego.</strong> Modificar hilos energéticos para perjudicar acarrea consecuencias graves; el plano astral no es para cualquiera.</li>
-                <li><strong>2. El ritual en sí:</strong> Aunque poseo el conocimiento absoluto de cómo se ejecutan los trabajos oscuros, bajo ninguna circunstancia los realizo ni facilito directrices sobre ellos. No insistas.</li>
-                <li><strong>3. Los materiales para trabajos oscuros no son agradables.</strong> Rompen con la armonía, la estética pura y la higiene vibracional que promuevo en este santuario.</li>
-            </ul>
-            <div class="enfoque-positivo">
-                ✨ <strong>Abstenerse de pedidos oscuros.</strong> Este espacio está consagrado única y exclusivamente para el crecimiento espiritual, la evolución financiera, el bienestar, la descarga limpia y la paz interior.
-            </div>
-        </div>
-
-        <!-- SECCIÓN: CATÁLOGO DE PAGO -->
-        <h2 class="section-title">Catálogo de Herramientas y Formaciones</h2>
-        
-        <div class="area-agregar" id="area-agregar-btn">
-            <button class="btn-agregar" onclick="crearNuevoProducto()">➕ Agregar Nuevo Producto de Pago</button>
-        </div>
-        <div class="grid" id="contenedor-productos">
-            <!-- Los productos premium se cargan aquí -->
-        </div>
-        
-    </section>
-
-    <section class="testimonials">
-        <div class="container" style="padding:0;">
-            <h2 class="section-title" style="color:var(--oro);">Experiencias de la Comunidad</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p>"La formación en astrología me cambió por completo la forma de ver mis procesos personales. Todo super claro y práctico."</p>
-                    <span>— Mariana R.</span>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Hice el ritual de luna llena y la energía que se movió fue increíble. Recomiendo cada una de sus herramientas guiadas."</p>
-                    <span>— Florencia D.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="admin-panel">
-        <span>🛠️ Modo Editor Activo. ¡Modifica los productos y descargas gratis directamente en la pantalla!</span>
-        <button onclick="guardarCambios()">💾 Guardar Todo</button>
+    <div class="cupos">
+        🔮 <strong>Cupos para consultas personalizadas:</strong> Solo <strong>5 por día</strong><br>
+        📅 Turnos disponibles hoy: <strong>5/5</strong>
     </div>
 
-    <!-- WhatsApp Flotante Optimizado -->
-    <a href="https://wa.me/5493425683418?text=Hola!%20Realic%C3%A9%20mi%20compra%20en%20Alma%20Serena%20y%20adjunto%20mi%20comprobante.%20Vengo%20a%20solicitar%20mi%20Ebook%20Personalizado%20(M%C3%A1x.%2030%20p%C3%A1g.%20en%20PDF).%20Entiendo%20que%20la%20entrega%20demora%20de%2024%20a%2096%20hs%20seg%C3%BAn%20la%20construcci%C3%B3n%20del%20pedido.%20El%20TEMA%20ESPEC%C3%8DFICO%20que%20solicito%20es:%20____________________%20y%20el%20IDIOMA%20es:%20____________________" class="whatsapp-float" target="_blank">
-        <svg style="width:30px;height:30px;fill:white;vertical-align:middle" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.135-1.347a9.94 9.94 0 0 0 4.873 1.277h.005c5.505 0 9.99-4.478 9.99-9.985 0-2.667-1.037-5.176-2.922-7.062A9.923 9.923 0 0 0 12.012 2zm5.726 14.12c-.25.704-1.235 1.293-1.705 1.342-.435.044-.997.058-2.647-.624a10.96 10.96 0 0 1-4.577-4.043c-.615-.818-1.041-1.802-1.041-2.825 0-1.268.665-1.892.903-2.14.238-.248.53-.31.704-.31a.417.417 0 0 1 .403.242c.174.417.585 1.433.636 1.539.05.105.084.23.013.37-.07.14-.146.242-.258.373-.112.13-.234.29-.334.39-.11.11-.227.23-.098.452a8.04 8.04 0 0 0 1.5 1.861 7.3 7.3 0 0 0 2.164 1.332c.22.11.35.093.479-.056.128-.15.556-.648.704-.87.147-.22.296-.184.5-.11.204.075 1.298.613 1.52.724.223.111.372.167.428.263.056.096.056.554-.194 1.258z"/></svg>
-    </a>
-
-    <!-- FOOTER CON ENLACES LEGALES REQUERIDOS -->
-    <footer>
-        <p>&copy; 2026 Alma Serena - Astrología y Bienestar. Todos los derechos reservados.</p>
-        <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">
-            <a href="#politicas" style="color: white; text-decoration: none; margin: 0 10px;">Política de Privacidad</a> | 
-            <a href="#terminos" style="color: white; text-decoration: none; margin: 0 10px;">Términos y Condiciones</a> | 
-            <a href="#deslinde" style="color: white; text-decoration: none; margin: 0 10px;">Deslinde de Responsabilidad</a>
-        </p>
-    </footer>
-
-    <!-- SCRIPTS DE GOOGLE TRANSLATE -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'en,es,pt,it,fr,de', // Idiomas disponibles (Inglés, Español, Portugués, Italiano, Francés, Alemán)
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <script>
-        let esAdmin = false;
+    <h2>📿 Nuestros Cursos y Ebooks</h2>
+    <div class="catalogo">
         
-        let productos = [
-            { id: "p1", tag: "Limpiezas", titulo: "Ritual de Volteo y Descarga", desc: "Liberación energética profunda de envidias, bloqueos y estancamiento físico y astral.", precio: "$35 USD", link: "https://hotmart.com", img: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=500" },
-            { id: "p2", tag: "Abundancia", titulo: "Apertura de Caminos Total", desc: "Kit digital y guía ritual para desbloquear el flujo del dinero, prosperidad y el éxito laboral.", precio: "$35 USD", link: "https://hotmart.com", img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500" },
-            { id: "p3", tag: "Alta Magia", titulo: "Guía de Conexión Espiritual", desc: "Rituales guiados con entidades y lectura sagrada de velas para recibir guía protectora.", precio: "$35 USD", link: "https://hotmart.com", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" }
-        ];
+        <!-- Curso 1: Limpiezas -->
+        <div class="curso-card">
+            <h3>🌀 Limpiezas Energéticas</h3>
+            <p>Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.</p>
+            <div class="precio">$39 <small>USD</small></div>
+            <a href="https://pay.hotmart.com/TU_LINK_LIMPIEZAS" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
+            <a href="curso-limpiezas.html" class="boton-detalle">Ver detalles →</a>
+        </div>
 
-        let recursosGratis = [
-            { id: "g1", tag: "Ritual Gratis", titulo: "Guía de Altar Lunar", desc: "Aprende a configurar tu propio espacio sagrado para intencionar en Luna Nueva.", precio: "¡Gratis!", link: "https://youtube.com", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" }
-        ];
+        <!-- Curso 2: Abundancia -->
+        <div class="curso-card">
+            <h3>💎 Apertura de Caminos</h3>
+            <p>Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.</p>
+            <div class="precio">$49 <small>USD</small></div>
+            <a href="https://pay.hotmart.com/TU_LINK_ABUNDANCIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
+            <a href="curso-abundancia.html" class="boton-detalle">Ver detalles →</a>
+        </div>
 
-        const TOTAL_CUPOS = 5;
-        let cuposDisponibles = TOTAL_CUPOS;
+        <!-- Curso 3: Alta Magia -->
+        <div class="curso-card">
+            <h3>✨ Alta Magia</h3>
+            <p>Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.</p>
+            <div class="precio">$59 <small>USD</small></div>
+            <a href="https://pay.hotmart.com/TU_LINK_ALTA_MAGIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
+            <a href="curso-alta-magia.html" class="boton-detalle">Ver detalles →</a>
+        </div>
 
-        function verificarYRenovarTurnero() {
-            const fechaHoy = new Date().toDateString();
-            const ultimaFecha = localStorage.getItem('almaSerena_fecha_turnero');
-            
-            if (ultimaFecha !== fechaHoy) {
-                localStorage.setItem('almaSerena_fecha_turnero', fechaHoy);
-                localStorage.setItem('almaSerena_cupos_hoy', TOTAL_CUPOS);
-                cuposDisponibles = TOTAL_CUPOS;
-            } else {
-                const guardados = localStorage.getItem('almaSerena_cupos_hoy');
-                cuposDisponibles = guardados !== null ? parseInt(guardados) : TOTAL_CUPOS;
-            }
-            actualizarInterfazTurnero();
-        }
+        <!-- Curso 4: Nuevo curso (ejemplo) -->
+        <div class="curso-card">
+            <h3>🌙 Baños de Luna</h3>
+            <p>Rituales con sales, hierbas y fases lunares para prosperidad y protección.</p>
+            <div class="precio">$35 <small>USD</small></div>
+            <a href="https://pay.hotmart.com/TU_LINK_BAÑOS_LUNA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
+            <a href="curso-banos-luna.html" class="boton-detalle">Ver detalles →</a>
+        </div>
+    </div>
 
-        function actualizarInterfazTurnero() {
-            const txtCount = document.getElementById('cupos-count');
-            const btn = document.getElementById('btn-reservar');
-            txtCount.innerText = cuposDisponibles;
-            
-            if (cuposDisponibles <= 0) {
-                btn.innerText = "🚫 Cupos Agotados por Hoy";
-                btn.className = "btn-turno agotado";
-                btn.onclick = null;
-            } else {
-                btn.innerText = "✨ Reservar mi Consulta de Hoy";
-                btn.className = "btn-turno";
-                btn.onclick = solicitarTurno;
-            }
-        }
+    <div style="text-align: center; margin: 2rem 0; padding: 1rem; background-color: #f0e3d4; border-radius: 20px;">
+        <p>📖 <strong>¿Buscas un ebook personalizado?</strong> Escríbeme por WhatsApp y creamos juntos el ritual perfecto para ti.</p>
+        <a href="https://wa.me/TU_NUMERO?text=Hola%2C%20quiero%20un%20ebook%20personalizado" class="boton-comprar" style="background-color: #d4a373;">💬 Solicitar ebook a medida</a>
+    </div>
+</div>
 
-        function solicitarTurno() {
-            if (cuposDisponibles > 0) {
-                cuposDisponibles--;
-                localStorage.setItem('almaSerena_cupos_hoy', cuposDisponibles);
-                actualizarInterfazTurnero();
-                
-                const msg = "Hola! Vi en la web que quedan cupos disponibles para hoy. Me gustaría reservar mi espacio para una consulta de ayuda espiritual enfocada en evolución y paz.";
-                window.open("https://wa.me/5493425683418?text=" + encodeURIComponent(msg), "_blank");
-            }
-        }
+<a href="https://wa.me/TU_NUMERO" class="boton-wsp" target="_blank">💬 WhatsApp</a>
 
-        window.onload = function() {
-            if(localStorage.getItem('almaSerena_lista_productos')) {
-                productos = JSON.parse(localStorage.getItem('almaSerena_lista_productos'));
-            }
-            if(localStorage.getItem('almaSerena_lista_gratis')) {
-                recursosGratis = JSON.parse(localStorage.getItem('almaSerena_lista_gratis'));
-            }
-            verificarYRenovarTurnero();
-            renderizarTodo();
-        };
+<footer class="footer-legal">
+    <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+            <div><strong>📜 Aviso Legal</strong><br>Contenido espiritual informativo. No reemplaza consejo profesional.</div>
+            <div><strong>🔒 Privacidad</strong><br>No usamos cookies. Tus datos son solo para tu servicio.</div>
+            <div><strong>⚖️ Condiciones</strong><br>No reembolsos en productos digitales. Pagos por Hotmart.</div>
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">© 2026 Alma Serena</div>
+    </div>
+</footer>
 
-        function renderizarTodo() {
-            renderizarSeccion(productos, 'contenedor-productos', false);
-            renderizarSeccion(recursosGratis, 'contenedor-gratis', true);
-        }
-
-        function renderizarSeccion(lista, contenedorId, esGratuito) {
-            const contenedor = document.getElementById(contenedorId);
-            contenedor.innerHTML = '';
-            
-            lista.forEach((p, index) => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <div class="card-img" style="background-image: url('${p.img}')">
-                        <button class="edit-img-btn" style="display: ${esAdmin ? 'block' : 'none'}" onclick="cambiarImagen('${contenedorId}', ${index})">🖼️ Cambiar Foto</button>
-                        <button class="btn-eliminar" style="display: ${esAdmin ? 'block' : 'none'}" onclick="eliminarElemento('${contenedorId}', ${index})">❌ Eliminar</button>
-                    </div>
-                    <div class="card-content">
-                        ${esAdmin ? 
-                            `<input type="text" class="edit-field" style="display: block" placeholder="Etiqueta" value="${p.tag}" oninput="actualizarCampo('${contenedorId}', ${index}, 'tag', this.value)">` : 
-                            `<span class="card-tag">${p.tag}</span>`
-                        }
-                        
-                        ${esAdmin ? 
-                            `<input type="text" class="edit-field" style="display: block" placeholder="Título" value="${p.titulo}" oninput="actualizarCampo('${contenedorId}', ${index}, 'titulo', this.value)">` : 
-                            `<h3 class="card-title">${p.titulo}</h3>`
-                        }
-                        
-                        ${esAdmin ? 
-                            `<textarea class="edit-field" style="display: block" placeholder="Descripción" oninput="actualizarCampo('${contenedorId}', ${index}, 'desc', this.value)">${p.desc}</textarea>` : 
-                            `<p class="card-desc">${p.desc}</p>`
-                        }
-                        
-                        <div class="card-footer">
-                            <div>
-                                ${esAdmin ? 
-                                    `<input type="text" class="edit-field" style="display: block" placeholder="Precio" value="${p.precio}" oninput="actualizarCampo('${contenedorId}', ${index}, 'precio', this.value)">` : 
-                                    `<span class="price">${p.precio}</span>`
-                                }
-                            </div>
-                            
-                            ${esAdmin ? 
-                                `<input type="text" class="edit-field" style="display: block" placeholder="Enlace de descarga o Hotmart" value="${p.link}" oninput="actualizarCampo('${contenedorId}', ${index}, 'link', this.value)">` : 
-                                `<a href="${p.link}" target="_blank" class="btn-buy ${esGratuito ? 'btn-download' : ''}">${esGratuito ? 'Descargar Gratis' : 'Ver Más'}</a>`
-                            }
-                        </div>
-                    </div>
-                `;
-                contenedor.appendChild(card);
-            });
-        }
-
-        function actualizarCampo(seccionId, index, campo, valor) {
-            if(seccionId === 'contenedor-productos') {
-                productos[index][campo] = valor;
-            } else {
-                recursosGratis[index][campo] = valor;
-            }
-        }
-
-        function ingresarAdmin() {
-            const pass = prompt("Ingresa tu contraseña de administradora:");
-            if(pass === "AlquimiaS4rena2026!") {
-                esAdmin = true;
-                document.getElementById('admin-panel').style.display = 'block';
-                document.getElementById('area-agregar-btn').style.display = 'block';
-                document.getElementById('area-agregar-gratis-btn').style.display = 'block';
-                renderizarTodo();
-                alert("¡Modo edición activo!");
-            } else {
-                alert("Contraseña incorrecta.");
-            }
-        }
-
-        function crearNuevoProducto() {
-            productos.push({
-                id: "p_" + Date.now(),
-                tag: "Mística",
-                titulo: "Nuevo Servicio Espiritual",
-                desc: "Describe aquí el ritual, limpieza o amuleto que ofreces.",
-                precio: "$35 USD",
-                link: "#",
-                img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500"
-            });
-            renderizarTodo();
-        }
-
-        function crearNuevoRecursoGratis() {
-            recursosGratis.push({
-                id: "g_" + Date.now(),
-                tag: "Regalo Gratis",
-                titulo: "Nuevo Recurso Místico",
-                desc: "Explica el ritual descargable.",
-                precio: "¡Gratis!",
-                link: "#",
-                img: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500"
-            });
-            renderizarTodo();
-        }
-
-        function eliminarElemento(seccionId, index) {
-            if(confirm("¿Estás segura?")) {
-                if(seccionId === 'contenedor-productos') {
-                    productos.splice(index, 1);
-                } else {
-                    recursosGratis.splice(index, 1);
-                }
-                renderizarTodo();
-            }
-        }
-
-        function cambiarImagen(seccionId, index) {
-            const url = prompt("URL de la imagen:");
-            if(url) {
-                if(seccionId === 'contenedor-productos') {
-                    productos[index].img = url;
-                } else {
-                    recursosGratis[index].img = url;
-                }
-                renderizarTodo();
-            }
-        }
-
-        function guardarCambios() {
-            localStorage.setItem('almaSerena_lista_productos', JSON.stringify(productos));
-            localStorage.setItem('almaSerena_lista_gratis', JSON.stringify(recursosGratis));
-            esAdmin = false;
-            document.getElementById('admin-panel').style.display = 'none';
-            document.getElementById('area-agregar-btn').style.display = 'none';
-            document.getElementById('area-agregar-gratis-btn').style.display = 'none';
-            renderizarTodo();
-            alert("¡Cambios y reglas de Alma Serena guardados exitosamente!");
-        }
-    </script>
 </body>
 </html>
