@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Alma Serena | Cursos y Ebooks Espirituales</title>
     <meta name="description" content="Cursos espirituales, ebooks personalizados y rituales guiados para alinear tu energía. Compra directa con Hotmart.">
     <style>
@@ -98,25 +98,7 @@
         .boton-comprar:hover {
             background-color: #128C7E;
         }
-        .boton-detalle {
-            background-color: #d4a373;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-        .footer-legal {
-            background-color: #f9f5ef;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-            border-top: 2px solid #d4b48c;
-            font-size: 0.8rem;
-            color: #4a3b2c;
-        }
-        .boton-wsp {
+        .boton-wsp-flotante {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -126,7 +108,38 @@
             padding: 12px 18px;
             text-decoration: none;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        .boton-wsp-flotante:hover {
+            background-color: #128C7E;
+        }
+        .footer-legal {
+            background-color: #f9f5ef;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            border-top: 2px solid #d4b48c;
+            font-size: 0.8rem;
+            color: #4a3b2c;
+        }
+        .footer-legal .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .llamada-final {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: #f0e3d4;
+            border-radius: 20px;
         }
         @media (max-width: 700px) {
             .curso-card { width: 100%; }
@@ -151,60 +164,80 @@
     <h2>📿 Nuestros Cursos y Ebooks</h2>
     <div class="catalogo">
         
-        <!-- Curso 1: Limpiezas -->
+        <!-- ============================================= -->
+        <!-- 🟢 COPIÁ Y PEGÁ ESTA TARJETA PARA AGREGAR MÁS PRODUCTOS -->
+        <!-- ============================================= -->
+
+        <!-- CURSO 1: Limpiezas Energéticas -->
         <div class="curso-card">
             <h3>🌀 Limpiezas Energéticas</h3>
             <p>Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.</p>
             <div class="precio">$39 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_LINK_LIMPIEZAS" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
-            <a href="curso-limpiezas.html" class="boton-detalle">Ver detalles →</a>
+            <a href="https://pay.hotmart.com/TU_ENLACE_LIMPIEZAS" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
         </div>
 
-        <!-- Curso 2: Abundancia -->
+        <!-- CURSO 2: Apertura de Caminos -->
         <div class="curso-card">
             <h3>💎 Apertura de Caminos</h3>
             <p>Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.</p>
             <div class="precio">$49 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_LINK_ABUNDANCIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
-            <a href="curso-abundancia.html" class="boton-detalle">Ver detalles →</a>
+            <a href="https://pay.hotmart.com/TU_ENLACE_APERTURA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
         </div>
 
-        <!-- Curso 3: Alta Magia -->
+        <!-- CURSO 3: Alta Magia -->
         <div class="curso-card">
             <h3>✨ Alta Magia</h3>
             <p>Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.</p>
             <div class="precio">$59 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_LINK_ALTA_MAGIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
-            <a href="curso-alta-magia.html" class="boton-detalle">Ver detalles →</a>
+            <a href="https://pay.hotmart.com/TU_ENLACE_ALTA_MAGIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
         </div>
 
-        <!-- Curso 4: Nuevo curso (ejemplo) -->
+        <!-- CURSO 4: Baños de Luna -->
         <div class="curso-card">
             <h3>🌙 Baños de Luna</h3>
             <p>Rituales con sales, hierbas y fases lunares para prosperidad y protección.</p>
             <div class="precio">$35 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_LINK_BAÑOS_LUNA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a><br>
-            <a href="curso-banos-luna.html" class="boton-detalle">Ver detalles →</a>
+            <a href="https://pay.hotmart.com/TU_ENLACE_BANOS_LUNA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
         </div>
+
+        <!-- ============================================= -->
+        <!-- 🟢 PARA AGREGAR UN PRODUCTO NUEVO:
+             1. COPIÁ TODO ESTO:
+
+                <div class="curso-card">
+                    <h3>🆕 NOMBRE DEL CURSO</h3>
+                    <p>Descripción breve del curso aquí.</p>
+                    <div class="precio">$XX <small>USD</small></div>
+                    <a href="https://pay.hotmart.com/TU_ENLACE" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+                </div>
+
+             2. PEGALO ANTES DE ESTE COMENTARIO
+             3. CAMBIÁ el nombre, precio y enlace de Hotmart.
+        -->
+        <!-- ============================================= -->
+
     </div>
 
-    <div style="text-align: center; margin: 2rem 0; padding: 1rem; background-color: #f0e3d4; border-radius: 20px;">
-        <p>📖 <strong>¿Buscas un ebook personalizado?</strong> Escríbeme por WhatsApp y creamos juntos el ritual perfecto para ti.</p>
-        <a href="https://wa.me/TU_NUMERO?text=Hola%2C%20quiero%20un%20ebook%20personalizado" class="boton-comprar" style="background-color: #d4a373;">💬 Solicitar ebook a medida</a>
+    <!-- Sección WhatsApp personalizado -->
+    <div class="llamada-final">
+        <p>📖 <strong>¿Buscas un ebook personalizado o una consulta a medida?</strong></p>
+        <p>Escríbeme por WhatsApp y creamos juntos el ritual perfecto para ti.</p>
+        <a href="https://wa.me/5493425683418?text=Hola%2C%20vi%20tu%20web%20Alma%20Serena%20y%20quiero%20consultar%20por%20un%20ebook%20personalizado" class="boton-comprar" style="background-color: #d4a373;">💬 Consultar ebook personalizado</a>
     </div>
 </div>
 
-<a href="https://wa.me/TU_NUMERO" class="boton-wsp" target="_blank">💬 WhatsApp</a>
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/5493425683418" class="boton-wsp-flotante" target="_blank">💬 WhatsApp</a>
 
+<!-- Footer legal -->
 <footer class="footer-legal">
-    <div class="container">
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
-            <div><strong>📜 Aviso Legal</strong><br>Contenido espiritual informativo. No reemplaza consejo profesional.</div>
-            <div><strong>🔒 Privacidad</strong><br>No usamos cookies. Tus datos son solo para tu servicio.</div>
-            <div><strong>⚖️ Condiciones</strong><br>No reembolsos en productos digitales. Pagos por Hotmart.</div>
-        </div>
-        <div style="text-align: center; margin-top: 1rem;">© 2026 Alma Serena</div>
+    <div class="footer-grid">
+        <div><strong>📜 Aviso Legal</strong><br>Alma Serena es un espacio de crecimiento espiritual. Los contenidos son informativos y no sustituyen consejo médico, psicológico o financiero.</div>
+        <div><strong>🔒 Privacidad</strong><br>No usamos cookies. Tus datos se usan solo para brindarte el servicio. Pagos por Hotmart.</div>
+        <div><strong>⚖️ Condiciones</strong><br>No reembolsos en productos digitales personalizados. Al comprar aceptas esta política.</div>
+        <div><strong>📧 Contacto legal</strong><br>almaserena.legal@proton.me</div>
     </div>
+    <div style="text-align: center; margin-top: 1.5rem;">© 2026 Alma Serena</div>
 </footer>
 
 </body>
