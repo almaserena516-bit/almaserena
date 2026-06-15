@@ -2,243 +2,368 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Alma Serena | Cursos y Ebooks Espirituales</title>
-    <meta name="description" content="Cursos espirituales, ebooks personalizados y rituales guiados para alinear tu energía. Compra directa con Hotmart.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma Serena | Cursos y Ebooks</title>
+    <!-- Google Fonts para estilo místico y elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --color-fondo: #fdfbf7;
+            --color-principal: #4a3b32;
+            --color-secundario: #6b5b52;
+            --color-crema: #f5efe6;
+            --color-dorado: #c5a880;
+            --color-whatsapp: #25d366;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fefaf5;
-            color: #2c2418;
-            line-height: 1.5;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-principal);
+            line-height: 1.6;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
+
+        /* Encabezado */
         header {
             text-align: center;
-            padding: 2rem 1rem;
-            background: linear-gradient(135deg, #f9f1e8 0%, #fefaf5 100%);
-            border-radius: 0 0 30px 30px;
+            padding: 60px 20px;
+            background-color: var(--color-crema);
+            border-bottom: 1px solid #e8dfd2;
         }
-        h1 {
-            font-size: 2rem;
-            color: #5c3d2e;
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: var(--color-principal);
         }
-        .tagline {
-            font-size: 1.2rem;
-            color: #7a5a4a;
-            margin-top: 0.5rem;
+
+        header .subtitulo {
+            font-size: 1.1rem;
+            color: var(--color-dorado);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
-        .cupos {
-            background-color: #f0e3d4;
-            border-left: 6px solid #d4a373;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 12px;
+
+        header .descripcion {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--color-secundario);
+            font-size: 0.95rem;
+        }
+
+        /* Sección Productos */
+        .seccion-productos {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .titulo-seccion {
+            font-family: 'Cinzel', serif;
             text-align: center;
-        }
-        h2 {
             font-size: 1.8rem;
-            color: #5c3d2e;
-            margin: 2rem 0 1rem;
-            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
         }
-        .catalogo {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
+
+        .titulo-seccion::after {
+            content: '✨';
+            display: block;
+            font-size: 1rem;
+            color: var(--color-dorado);
+            margin-top: 5px;
+        }
+
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             justify-content: center;
         }
-        .curso-card {
-            background: white;
-            border-radius: 20px;
-            padding: 1.5rem;
-            width: 280px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+
+        .tarjeta-producto {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(74, 59, 50, 0.05);
+            border: 1px solid #f0e6d8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tarjeta-producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(74, 59, 50, 0.1);
+        }
+
+        .producto-icono {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--color-dorado);
+        }
+
+        .producto-nombre {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--color-principal);
+        }
+
+        .producto-desc {
+            font-size: 0.9rem;
+            color: var(--color-secundario);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .producto-precio {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--color-principal);
+            margin-bottom: 15px;
+        }
+
+        .producto-precio span {
+            font-size: 0.8rem;
+            color: var(--color-secundario);
+        }
+
+        .btn-comprar {
+            display: block;
+            background-color: #3a86ff; /* Cambiado a un tono azul profesional para destacar, o puedes usar verde */
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-comprar:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Sección Sobre Mí */
+        .sobre-mi {
+            background-color: var(--color-crema);
+            padding: 60px 20px;
             text-align: center;
         }
-        .curso-card:hover {
-            transform: translateY(-5px);
+
+        .sobre-mi-contenido {
+            max-width: 700px;
+            margin: 0 auto;
         }
-        .curso-card h3 {
-            font-size: 1.4rem;
-            color: #5c3d2e;
-            margin: 0.5rem 0;
+
+        /* Testimonios */
+        .testimonios {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        .precio {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #d4a373;
-            margin: 1rem 0;
+
+        .grid-testimonios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
-        .precio small {
-            font-size: 0.8rem;
-            color: #8a7a6a;
+
+        .testimonio-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border-left: 3px solid var(--color-dorado);
+            text-align: left;
         }
-        .boton-comprar {
-            background-color: #25D366;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
+
+        /* FAQ */
+        .faq {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #f0e6d8;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 8px;
+            color: var(--color-principal);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-principal);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--color-dorado);
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 0.5rem;
-            transition: background 0.3s;
+            margin: 0 10px;
         }
-        .boton-comprar:hover {
-            background-color: #128C7E;
+
+        .aviso-legal {
+            font-size: 0.7rem;
+            color: #a89a90;
+            max-width: 800px;
+            margin: 20px auto 0;
+            line-height: 1.5;
         }
-        .boton-wsp-flotante {
+
+        /* WhatsApp Flotante */
+        .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25D366;
+            background-color: var(--color-whatsapp);
             color: white;
-            border-radius: 50px;
-            padding: 12px 18px;
-            text-decoration: none;
-            font-weight: bold;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
             z-index: 1000;
-            font-size: 0.9rem;
+            transition: transform 0.3s;
         }
-        .boton-wsp-flotante:hover {
-            background-color: #128C7E;
-        }
-        .footer-legal {
-            background-color: #f9f5ef;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-            border-top: 2px solid #d4b48c;
-            font-size: 0.8rem;
-            color: #4a3b2c;
-        }
-        .footer-legal .footer-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .llamada-final {
-            text-align: center;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background-color: #f0e3d4;
-            border-radius: 20px;
-        }
-        @media (max-width: 700px) {
-            .curso-card { width: 100%; }
-            h1 { font-size: 1.5rem; }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- Encabezado -->
     <header>
-        <h1>🌿 ALMA SERENA</h1>
-        <div class="tagline">Alinea tu Energía con la Sabiduría del Cosmos</div>
-        <p style="margin-top: 1rem;">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas para encender tu poder interior.</p>
+        <h1>ALMA SERENA</h1>
+        <div class="subtitulo">Alinea tu Energía con la Sabiduría del Cosmos</div>
+        <p class="descripcion">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas para encender tu poder interior de forma simple y profunda.</p>
     </header>
 
-    <div class="cupos">
-        🔮 <strong>Cupos para consultas personalizadas:</strong> Solo <strong>5 por día</strong><br>
-        📅 Turnos disponibles hoy: <strong>5/5</strong>
-    </div>
-
-    <h2>📿 Nuestros Cursos y Ebooks</h2>
-    <div class="catalogo">
-        
-        <!-- ============================================= -->
-        <!-- 🟢 COPIÁ Y PEGÁ ESTA TARJETA PARA AGREGAR MÁS PRODUCTOS -->
-        <!-- ============================================= -->
-
-        <!-- CURSO 1: Limpiezas Energéticas -->
-        <div class="curso-card">
-            <h3>🌀 Limpiezas Energéticas</h3>
-            <p>Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.</p>
-            <div class="precio">$39 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_ENLACE_LIMPIEZAS" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+    <!-- Sección Productos -->
+    <section class="seccion-productos">
+        <h2 class="titulo-seccion">Nuestros Cursos y Ebooks</h2>
+        <div class="contenedor-productos" id="productos-lista">
+            <!-- AQUÍ SE CARGAN LOS 10+ PRODUCTOS AUTOMÁTICAMENTE DESDE EXCEL O EL SCRIPT -->
         </div>
+    </section>
 
-        <!-- CURSO 2: Apertura de Caminos -->
-        <div class="curso-card">
-            <h3>💎 Apertura de Caminos</h3>
-            <p>Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.</p>
-            <div class="precio">$49 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_ENLACE_APERTURA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+    <!-- Sobre Mí -->
+    <section class="sobre-mi">
+        <div class="sobre-mi-contenido">
+            <h2 class="titulo-seccion">El Alma detrás de este espacio</h2>
+            <p>¡Hola! Soy la creadora de Alma Serena. Mi misión es facilitarte herramientas y conocimientos ancestrales para que limpies tus bloqueos energéticos, abras tus caminos hacia la abundancia y conectes con la magia que ya habita en ti.</p>
         </div>
+    </section>
 
-        <!-- CURSO 3: Alta Magia -->
-        <div class="curso-card">
-            <h3>✨ Alta Magia</h3>
-            <p>Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.</p>
-            <div class="precio">$59 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_ENLACE_ALTA_MAGIA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <h2 class="titulo-seccion">Almas que ya transformaron su energía</h2>
+        <div class="grid-testimonios">
+            <div class="testimonio-card">
+                <p>"Las guías son hermosas y súper claras. Pude hacer mi primera limpieza en casa y el ambiente cambió por completo."</p>
+                <br><strong>— Valeria G.</strong>
+            </div>
+            <div class="testimonio-card">
+                <p>"Tenía dudas sobre el pago por ser de otro país, pero Hotmart procesó todo en mi moneda y me llegó al instante. Excelente servicio."</p>
+                <br><strong>— Martín L.</strong>
+            </div>
         </div>
+    </section>
 
-        <!-- CURSO 4: Baños de Luna -->
-        <div class="curso-card">
-            <h3>🌙 Baños de Luna</h3>
-            <p>Rituales con sales, hierbas y fases lunares para prosperidad y protección.</p>
-            <div class="precio">$35 <small>USD</small></div>
-            <a href="https://pay.hotmart.com/TU_ENLACE_BANOS_LUNA" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h4>¿Cómo recibo mi acceso?</h4>
+            <p>Inmediatamente después del pago, recibirás un correo de Hotmart con tu enlace de descarga o acceso a la plataforma de estudios.</p>
         </div>
+        <div class="faq-item">
+            <h4>¿Es seguro el pago?</h4>
+            <p>Sí, todos los pagos están cifrados y respaldados por la tecnología de seguridad global de Hotmart.</p>
+        </div>
+    </section>
 
-        <!-- ============================================= -->
-        <!-- 🟢 PARA AGREGAR UN PRODUCTO NUEVO:
-             1. COPIÁ TODO ESTO:
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Alma Serena. Todos los derechos reservados.</p>
+        <div style="margin: 15px 0;">
+            <a href="#">Instagram</a> | <a href="#">TikTok</a> | <a href="https://wa.me/TU_NUMERO_DE_WHATSAPP">Contacto</a>
+        </div>
+        <p class="aviso-legal">Este sitio no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc. Todas las compras son procesadas de manera segura a través de la plataforma Hotmart.</p>
+    </footer>
 
-                <div class="curso-card">
-                    <h3>🆕 NOMBRE DEL CURSO</h3>
-                    <p>Descripción breve del curso aquí.</p>
-                    <div class="precio">$XX <small>USD</small></div>
-                    <a href="https://pay.hotmart.com/TU_ENLACE" target="_blank" class="boton-comprar">🛒 Comprar ahora</a>
+    <!-- WhatsApp Flotante (Reemplaza TU_NUMERO por el tuyo con código de país, ej: 549...) -->
+    <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank">💬</a>
+
+    <!-- SCRIPT ADMINISTRADOR: Carga tus 10 productos -->
+    <script>
+        // ESTA ES TU BASE DE DATOS MANUAL MIENTRAS TANTO.
+        // Puedes agregar todos los productos que quieras aquí abajo siguiendo el mismo formato.
+        const productos = [
+            { icono: "👁️", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", link: "#" },
+            { icono: "💎", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", link: "#" },
+            { icono: "✨", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", link: "#" },
+            { icono: "🌙", nombre: "Baños de Luna", desc: "Rituales de reconexión y magnetismo personal aprovechando las fases lunares.", precio: "29", link: "#" },
+            { icono: "🃏", nombre: "Iniciación al Tarot", desc: "Aprende a leer los arcanos mayores desde cero y confía en tu intuición.", precio: "69", link: "#" },
+            { icono: "🌿", nombre: "Herboristería Mística", desc: "Guía práctica para usar plantas, sahumerios y aceites en tus espacios.", precio: "34", link: "#" },
+            { icono: "🔮", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", link: "#" },
+            { icono: "🧘", nombre: "Alineación de Chakras", desc: "Meditaciones guiadas y frecuencias para desbloquear tus centros de energía.", precio: "19", link: "#" },
+            { icono: "✍️", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", link: "#" },
+            { icono: "🦅", nombre: "Animales de Poder", desc: "Descubre tu guía totémico animal y aprende a invocar su medicina espiritual.", precio: "39", link: "#" }
+        ];
+
+        const contenedor = document.getElementById('productos-lista');
+
+        productos.forEach(prod => {
+            const tarjeta = document.createElement('div');
+            tarjeta.className = 'tarjeta-producto';
+            tarjeta.innerHTML = `
+                <div>
+                    <div class="producto-icono">${prod.icono}</div>
+                    <h3 class="producto-nombre">${prod.nombre}</h3>
+                    <p class="producto-desc">${prod.desc}</p>
                 </div>
-
-             2. PEGALO ANTES DE ESTE COMENTARIO
-             3. CAMBIÁ el nombre, precio y enlace de Hotmart.
-        -->
-        <!-- ============================================= -->
-
-    </div>
-
-    <!-- Sección WhatsApp personalizado -->
-    <div class="llamada-final">
-        <p>📖 <strong>¿Buscas un ebook personalizado o una consulta a medida?</strong></p>
-        <p>Escríbeme por WhatsApp y creamos juntos el ritual perfecto para ti.</p>
-        <a href="https://wa.me/5493425683418?text=Hola%2C%20vi%20tu%20web%20Alma%20Serena%20y%20quiero%20consultar%20por%20un%20ebook%20personalizado" class="boton-comprar" style="background-color: #d4a373;">💬 Consultar ebook personalizado</a>
-    </div>
-</div>
-
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/5493425683418" class="boton-wsp-flotante" target="_blank">💬 WhatsApp</a>
-
-<!-- Footer legal -->
-<footer class="footer-legal">
-    <div class="footer-grid">
-        <div><strong>📜 Aviso Legal</strong><br>Alma Serena es un espacio de crecimiento espiritual. Los contenidos son informativos y no sustituyen consejo médico, psicológico o financiero.</div>
-        <div><strong>🔒 Privacidad</strong><br>No usamos cookies. Tus datos se usan solo para brindarte el servicio. Pagos por Hotmart.</div>
-        <div><strong>⚖️ Condiciones</strong><br>No reembolsos en productos digitales personalizados. Al comprar aceptas esta política.</div>
-        <div><strong>📧 Contacto legal</strong><br>almaserena.legal@proton.me</div>
-    </div>
-    <div style="text-align: center; margin-top: 1.5rem;">© 2026 Alma Serena</div>
-</footer>
-
+                <div>
+                    <div class="producto-price-box">
+                        <div class="producto-precio">$${prod.precio} <span>USD</span></div>
+                    </div>
+                    <a href="${prod.link}" class="btn-comprar" target="_blank">Comprar ahora</a>
+                </div>
+            `;
+            contenedor.appendChild(tarjeta);
+        });
+    </script>
 </body>
 </html>
