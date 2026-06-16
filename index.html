@@ -6,8 +6,6 @@
     <title>Alma Serena | Cursos y Ebooks</title>
     <!-- Google Fonts para estilo místico y elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Librería de Iconos Profesionales (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -112,15 +110,23 @@
             box-shadow: 0 8px 25px rgba(74, 59, 50, 0.1);
         }
 
-        /* Estilo para los nuevos Iconos Místicos */
+        /* Contenedor para iconos SVG nativos */
         .producto-icono {
-            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--color-dorado);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 60px;
+            height: 65px;
+        }
+
+        .producto-icono svg {
+            width: 50px;
+            height: 50px;
+            fill: none;
+            stroke: var(--color-dorado);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .producto-nombre {
@@ -155,7 +161,7 @@
 
         .btn-comprar {
             display: block;
-            background: linear-gradient(135deg, #c5a880, #aa8f66); /* Cambiado a dorado elegante para combinar con la estética mística */
+            background: linear-gradient(135deg, #c5a880, #aa8f66); /* Dorado místico unificado */
             color: white;
             text-decoration: none;
             padding: 12px;
@@ -269,7 +275,7 @@
             line-height: 1.5;
         }
 
-        /* WhatsApp Flotante */
+        /* WhatsApp Flotante Estilizado Néctar */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -282,7 +288,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             text-decoration: none;
             z-index: 1000;
@@ -291,6 +296,12 @@
 
         .whatsapp-float:hover {
             transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
         }
 
         /* VENTANAS MODALES (POLÍTICAS) */
@@ -355,40 +366,16 @@
             cursor: pointer;
         }
 
-        /* MEDIA QUERIES PARA CELULARES Y TABLETS */
         @media (max-width: 768px) {
-            header {
-                padding: 40px 15px;
-            }
-            header h1 {
-                font-size: 1.8rem;
-                letter-spacing: 2px;
-            }
-            header .subtitulo {
-                font-size: 0.95rem;
-                letter-spacing: 1px;
-            }
-            header .descripcion {
-                font-size: 0.9rem;
-            }
-            .titulo-seccion {
-                font-size: 1.5rem;
-                margin-bottom: 30px;
-            }
-            .contenedor-productos {
-                gap: 20px;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-            .sobre-mi, .testimonios, .faq {
-                padding: 40px 15px;
-            }
-            .modal-contenido {
-                padding: 20px;
-            }
-            footer button {
-                display: inline-block;
-                margin: 5px 10px;
-            }
+            header { padding: 40px 15px; }
+            header h1 { font-size: 1.8rem; letter-spacing: 2px; }
+            header .subtitulo { font-size: 0.95rem; letter-spacing: 1px; }
+            header .descripcion { font-size: 0.9rem; }
+            .titulo-seccion { font-size: 1.5rem; margin-bottom: 30px; }
+            .contenedor-productos { gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+            .sobre-mi, .testimonios, .faq { padding: 40px 15px; }
+            .modal-contenido { padding: 20px; }
+            footer button { display: inline-block; margin: 5px 10px; }
         }
     </style>
 </head>
@@ -405,7 +392,7 @@
     <section class="seccion-productos">
         <h2 class="titulo-seccion">Nuestros Cursos y Ebooks</h2>
         <div class="contenedor-productos" id="productos-lista">
-            <!-- Se cargan dinámicamente con los iconos elegantes desde JS -->
+            <!-- Los productos se cargan impecables vía JavaScript abajo -->
         </div>
     </section>
 
@@ -437,7 +424,7 @@
         <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
         <div class="faq-item">
             <h4>¿Cómo recibo mi acceso?</h4>
-            <p>Inmediatamente después del pago de un producto digital estándar, recibirás un correo de Hotmart con tu enlace de descarga o acceso. Para ebooks personalizados bajo pedido, el tiempo de entrega y el canal se acordarán de forma directo.</p>
+            <p>Inmediatamente después del pago de un producto digital estándar, recibirás un correo de Hotmart con tu enlace de descarga o acceso. Para ebooks personalizados bajo pedido, el tiempo de entrega y el canal se acordarán de forma directa.</p>
         </div>
         <div class="faq-item">
             <h4>¿Es seguro el pago?</h4>
@@ -486,19 +473,28 @@
         </div>
     </div>
 
-    <!-- WhatsApp Flotante (Reemplaza TU_NUMERO por el tuyo con código de país, ej: 549...) -->
-    <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- WhatsApp Flotante Nativo -->
+    <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.256 5.264 0 11.73 0c3.132.001 6.077 1.22 8.29 3.433 2.212 2.212 3.43 5.158 3.43 8.29 0 6.474-5.261 11.73-11.726 11.73-1.997-.001-3.957-.51-5.694-1.48L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403 0 9.794-4.392 9.794-9.796 0-2.612-1.018-5.068-2.868-6.918a9.72 9.72 0 0 0-6.93-2.87c-5.404 0-9.797 4.393-9.797 9.797 0 1.532.418 3.03 1.21 4.36l-.98 3.57 3.656-.96c1.283.7 2.7 1.06 4.31 1.063zm10.334-7.03c-.27-.135-1.597-.788-1.845-.878-.247-.09-.427-.135-.607.135-.18.27-.697.878-.855 1.058-.158.18-.315.202-.585.067-.27-.135-1.14-.42-2.172-1.34-.803-.717-1.345-1.603-1.502-1.873-.158-.27-.017-.417.118-.552.123-.122.27-.315.405-.472.135-.158.18-.27.27-.45.09-.18.045-.337-.022-.472-.068-.135-.607-1.463-.832-2.003-.22-.528-.44-.456-.607-.464-.158-.008-.338-.008-.517-.008-.18 0-.472.068-.72.338-.247.27-.945.923-.945 2.25s.967 2.61 1.102 2.79c.135.18 1.902 2.904 4.607 4.07 1.116.48 1.99.767 2.674.983 1.127.359 2.147.307 2.955.186.902-.135 1.597-.652 1.822-1.282.225-.63.225-1.17.157-1.283-.067-.113-.247-.18-.517-.315z"/></svg>
+    </a>
 
-    <!-- SCRIPT ADMINISTRADOR -->
+    <!-- SCRIPT ADMINISTRADOR CON ICONOS VECTORIALES INTEGRADOS -->
     <script>
-        // Base de datos de productos limpia con CLASES DE ICONOS ELEGANTES (en lugar de emojis o dibujos feos)
+        // Íconos místicas estilizados en SVG puro (línea fina dorada)
+        const svgOjo = `<svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><path d="M12 5V3M5 7L3.5 5.5M19 7l1.5-1.5"/></svg>`;
+        const svgLlave = `<svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="4"/><path d="M11 12h12m-4 0v4m4-4v-4m-11 0l-1.5 1.5"/></svg>`;
+        const svgMagia = `<svg viewBox="0 0 24 24"><path d="M19 3l1 2.5L22.5 6 20 7l-1 2.5L18 7l-2.5-1 2.5-1zM5 14l1.5 3.5L10 19l-3.5 1.5L5 24l-1.5-3.5L0 19l3.5-1.5zM19 17l1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg>`;
+        const svgEscudo = `<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 6v11M9 9h6"/></svg>`;
+        const svgPluma = `<svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5zM16 8l-6 6M4 21h16"/></svg>`;
+        const svgLibro = `<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>`;
+
         const productos = [
-            { icono: "fa-solid fa-eye", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", esVariable: false, link: "#" },
-            { icono: "fa-solid fa-key", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", esVariable: false, link: "#" },
-            { icono: "fa-solid fa-wand-magic-sparkles", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", esVariable: false, link: "#" },
-            { icono: "fa-solid fa-shield-halved", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", esVariable: false, link: "#" },
-            { icono: "fa-solid fa-pen-nib", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", esVariable: false, link: "#" },
-            { icono: "fa-solid fa-book-open", nombre: "Ebooks a Pedido", desc: "Creamos ebooks personalizados en base al tema y páginas que solicites. El precio final varía según la complejidad temática y cantidad de páginas.", precio: "Variable", esVariable: true, link: "https://wa.me/TU_NUMERO?text=Hola!%20Me%20gustaría%20solicitar%20un%20Ebook%20a%20pedido." }
+            { icono: svgOjo, nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", esVariable: false, link: "#" },
+            { icono: svgLlave, nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", esVariable: false, link: "#" },
+            { icono: svgMagia, nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", esVariable: false, link: "#" },
+            { icono: svgEscudo, nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", esVariable: false, link: "#" },
+            { icono: svgPluma, nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", esVariable: false, link: "#" },
+            { icono: svgLibro, nombre: "Ebooks a Pedido", desc: "Creamos ebooks personalizados en base al tema y páginas que solicites. El precio final varía según la complejidad temática y cantidad de páginas.", precio: "Variable", esVariable: true, link: "https://wa.me/TU_NUMERO?text=Hola!%20Me%20gustaría%20solicitar%20un%20Ebook%20a%20pedido." }
         ];
 
         const contenedor = document.getElementById('productos-lista');
@@ -512,8 +508,7 @@
 
             tarjeta.innerHTML = `
                 <div>
-                    <!-- Renderiza el icono de líneas finas doradas -->
-                    <div class="producto-icono"><i class="${prod.icono}"></i></div>
+                    <div class="producto-icono">${prod.icono}</div>
                     <h3 class="producto-nombre">${prod.nombre}</h3>
                     <p class="producto-desc">${prod.desc}</p>
                 </div>
