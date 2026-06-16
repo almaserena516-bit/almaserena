@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma Serena | Cursos y Ebooks</title>
+    <!-- Google Fonts para estilo místico y elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Librería de Iconos Profesionales (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -94,7 +97,7 @@
         .tarjeta-producto {
             background: #ffffff;
             border-radius: 16px;
-            padding: 25px;
+            padding: 30px 25px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(74, 59, 50, 0.05);
             border: 1px solid #f0e6d8;
@@ -109,16 +112,21 @@
             box-shadow: 0 8px 25px rgba(74, 59, 50, 0.1);
         }
 
+        /* Estilo para los nuevos Iconos Místicos */
         .producto-icono {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             color: var(--color-dorado);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
         }
 
         .producto-nombre {
             font-family: 'Cinzel', serif;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: var(--color-principal);
             min-height: 2.4rem;
             display: flex;
@@ -147,7 +155,7 @@
 
         .btn-comprar {
             display: block;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #c5a880, #aa8f66); /* Cambiado a dorado elegante para combinar con la estética mística */
             color: white;
             text-decoration: none;
             padding: 12px;
@@ -347,7 +355,7 @@
             cursor: pointer;
         }
 
-        /* MEDIA QUERIES PARA ADAPTACIÓN PERFECTA EN MÓVILES Y TABLETS */
+        /* MEDIA QUERIES PARA CELULARES Y TABLETS */
         @media (max-width: 768px) {
             header {
                 padding: 40px 15px;
@@ -386,18 +394,22 @@
 </head>
 <body>
 
+    <!-- Encabezado -->
     <header>
         <h1>ALMA SERENA</h1>
         <div class="subtitulo">Alinea tu Energía con la Sabiduría del Cosmos</div>
         <p class="descripcion">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas para encender tu poder interior de forma simple y profunda.</p>
     </header>
 
+    <!-- Sección Productos -->
     <section class="seccion-productos">
         <h2 class="titulo-seccion">Nuestros Cursos y Ebooks</h2>
         <div class="contenedor-productos" id="productos-lista">
-            </div>
+            <!-- Se cargan dinámicamente con los iconos elegantes desde JS -->
+        </div>
     </section>
 
+    <!-- Sobre Mí -->
     <section class="sobre-mi">
         <div class="sobre-mi-contenido">
             <h2 class="titulo-seccion">El Alma detrás de este espacio</h2>
@@ -405,6 +417,7 @@
         </div>
     </section>
 
+    <!-- Testimonios -->
     <section class="testimonios">
         <h2 class="titulo-seccion">Almas que ya transformaron su energía</h2>
         <div class="grid-testimonios">
@@ -419,11 +432,12 @@
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="faq">
         <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
         <div class="faq-item">
             <h4>¿Cómo recibo mi acceso?</h4>
-            <p>Inmediatamente después del pago de un producto digital estándar, recibirás un correo de Hotmart con tu enlace de descarga o acceso. Para ebooks personalizados bajo pedido, el tiempo de entrega y el canal se acordarán de forma directa.</p>
+            <p>Inmediatamente después del pago de un producto digital estándar, recibirás un correo de Hotmart con tu enlace de descarga o acceso. Para ebooks personalizados bajo pedido, el tiempo de entrega y el canal se acordarán de forma directo.</p>
         </div>
         <div class="faq-item">
             <h4>¿Es seguro el pago?</h4>
@@ -431,6 +445,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Alma Serena. Todos los derechos reservados.</p>
         <div style="margin: 15px 0;">
@@ -441,6 +456,7 @@
         <p class="aviso-legal">Este sitio no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc. Todas las compras estándar son procesadas de manera segura a través de la plataforma Hotmart.</p>
     </footer>
 
+    <!-- Ventana Modal: Política de Privacidad -->
     <div id="modal-privacidad" class="modal">
         <div class="modal-contenido">
             <button class="cerrar-modal" onclick="cerrarModal('modal-privacidad')">&times;</button>
@@ -455,6 +471,7 @@
         </div>
     </div>
 
+    <!-- Ventana Modal: Términos y Condiciones -->
     <div id="modal-terminos" class="modal">
         <div class="modal-contenido">
             <button class="cerrar-modal" onclick="cerrarModal('modal-terminos')">&times;</button>
@@ -469,18 +486,19 @@
         </div>
     </div>
 
-    <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank">💬</a>
+    <!-- WhatsApp Flotante (Reemplaza TU_NUMERO por el tuyo con código de país, ej: 549...) -->
+    <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
+    <!-- SCRIPT ADMINISTRADOR -->
     <script>
-        // Base de datos de productos filtrada y actualizada
+        // Base de datos de productos limpia con CLASES DE ICONOS ELEGANTES (en lugar de emojis o dibujos feos)
         const productos = [
-            { icono: "👁️", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", esVariable: false, link: "#" },
-            { icono: "💎", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", esVariable: false, link: "#" },
-            { icono: "✨", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", esVariable: false, link: "#" },
-            { icono: "🔮", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", esVariable: false, link: "#" },
-            { icono: "✍️", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", esVariable: false, link: "#" },
-            // NUEVO SERVICIO INTEGRADO Y PERSONALIZADO
-            { icono: "📚", nombre: "Ebooks a Pedido", desc: "Creamos ebooks personalizados en base al tema y páginas que solicites. El precio final varía según la complejidad temática y cantidad de páginas.", precio: "Variable", esVariable: true, link: "https://wa.me/TU_NUMERO?text=Hola!%20Me%20gustaría%20solicitar%20un%20Ebook%20a%20pedido." }
+            { icono: "fa-solid fa-eye", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", esVariable: false, link: "#" },
+            { icono: "fa-solid fa-key", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", esVariable: false, link: "#" },
+            { icono: "fa-solid fa-wand-magic-sparkles", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", esVariable: false, link: "#" },
+            { icono: "fa-solid fa-shield-halved", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", esVariable: false, link: "#" },
+            { icono: "fa-solid fa-pen-nib", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", esVariable: false, link: "#" },
+            { icono: "fa-solid fa-book-open", nombre: "Ebooks a Pedido", desc: "Creamos ebooks personalizados en base al tema y páginas que solicites. El precio final varía según la complejidad temática y cantidad de páginas.", precio: "Variable", esVariable: true, link: "https://wa.me/TU_NUMERO?text=Hola!%20Me%20gustaría%20solicitar%20un%20Ebook%20a%20pedido." }
         ];
 
         const contenedor = document.getElementById('productos-lista');
@@ -489,13 +507,13 @@
             const tarjeta = document.createElement('div');
             tarjeta.className = 'tarjeta-producto';
             
-            // Lógica para mostrar precio fijo o variable de forma elegante
             const textoPrecio = prod.esVariable ? `${prod.precio}` : `$${prod.precio} <span>USD</span>`;
             const textoBoton = prod.esVariable ? "Solicitar Pedido" : "Comprar ahora";
 
             tarjeta.innerHTML = `
                 <div>
-                    <div class="producto-icono">${prod.icono}</div>
+                    <!-- Renderiza el icono de líneas finas doradas -->
+                    <div class="producto-icono"><i class="${prod.icono}"></i></div>
                     <h3 class="producto-nombre">${prod.nombre}</h3>
                     <p class="producto-desc">${prod.desc}</p>
                 </div>
@@ -509,18 +527,17 @@
             contenedor.appendChild(tarjeta);
         });
 
-        // Funciones para controlar las Ventanas Modales de las Políticas
+        // Funciones para las Ventanas Modales de las Políticas
         function abrirModal(idModal) {
             document.getElementById(idModal).style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
+            document.body.style.overflow = 'hidden';
         }
 
         function cerrarModal(idModal) {
             document.getElementById(idModal).style.display = 'none';
-            document.body.style.overflow = 'auto'; // Devuelve el scroll
+            document.body.style.overflow = 'auto';
         }
 
-        // Cerrar modales si se hace clic fuera del recuadro blanco
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = 'none';
