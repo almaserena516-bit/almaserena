@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma Serena | Cursos y Ebooks</title>
-    <!-- Google Fonts para estilo místico y elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -30,7 +29,7 @@
             line-height: 1.6;
         }
 
-        /* Encabezado */
+        /* Encabezado Responsivo */
         header {
             text-align: center;
             padding: 60px 20px;
@@ -121,6 +120,10 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: var(--color-principal);
+            min-height: 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .producto-desc {
@@ -144,7 +147,6 @@
 
         .btn-comprar {
             display: block;
-            background-color: #3a86ff; /* Cambiado a un tono azul profesional para destacar, o puedes usar verde */
             background: linear-gradient(135deg, #2ecc71, #27ae60);
             color: white;
             text-decoration: none;
@@ -152,7 +154,7 @@
             border-radius: 8px;
             font-weight: 600;
             font-size: 0.9rem;
-            transition: background 0.3s ease;
+            transition: filter 0.3s ease;
         }
 
         .btn-comprar:hover {
@@ -169,6 +171,12 @@
         .sobre-mi-contenido {
             max-width: 700px;
             margin: 0 auto;
+        }
+
+        .sobre-mi-contenido p {
+            font-size: 1rem;
+            color: var(--color-secundario);
+            line-height: 1.8;
         }
 
         /* Testimonios */
@@ -223,6 +231,22 @@
             font-size: 0.85rem;
         }
 
+        footer button {
+            background: none;
+            border: none;
+            color: var(--color-dorado);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer button:hover {
+            color: #fff;
+        }
+
         footer a {
             color: var(--color-dorado);
             text-decoration: none;
@@ -260,34 +284,127 @@
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
+
+        /* VENTANAS MODALES (POLÍTICAS) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(74, 59, 50, 0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-contenido {
+            background-color: var(--color-fondo);
+            color: var(--color-principal);
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: left;
+            border: 1px solid var(--color-dorado);
+        }
+
+        .modal-contenido h3 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: var(--color-principal);
+            border-bottom: 1px solid #f0e6d8;
+            padding-bottom: 10px;
+        }
+
+        .modal-contenido h5 {
+            font-size: 0.95rem;
+            margin: 15px 0 5px 0;
+            color: var(--color-secundario);
+        }
+
+        .modal-contenido p {
+            font-size: 0.85rem;
+            color: var(--color-secundario);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .cerrar-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--color-secundario);
+            cursor: pointer;
+        }
+
+        /* MEDIA QUERIES PARA ADAPTACIÓN PERFECTA EN MÓVILES Y TABLETS */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+            header .subtitulo {
+                font-size: 0.95rem;
+                letter-spacing: 1px;
+            }
+            header .descripcion {
+                font-size: 0.9rem;
+            }
+            .titulo-seccion {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            .contenedor-productos {
+                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            .sobre-mi, .testimonios, .faq {
+                padding: 40px 15px;
+            }
+            .modal-contenido {
+                padding: 20px;
+            }
+            footer button {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
     <header>
         <h1>ALMA SERENA</h1>
         <div class="subtitulo">Alinea tu Energía con la Sabiduría del Cosmos</div>
         <p class="descripcion">Descubre formaciones prácticas, rituales guiados y herramientas alquímicas para encender tu poder interior de forma simple y profunda.</p>
     </header>
 
-    <!-- Sección Productos -->
     <section class="seccion-productos">
         <h2 class="titulo-seccion">Nuestros Cursos y Ebooks</h2>
         <div class="contenedor-productos" id="productos-lista">
-            <!-- AQUÍ SE CARGAN LOS 10+ PRODUCTOS AUTOMÁTICAMENTE DESDE EXCEL O EL SCRIPT -->
-        </div>
+            </div>
     </section>
 
-    <!-- Sobre Mí -->
     <section class="sobre-mi">
         <div class="sobre-mi-contenido">
             <h2 class="titulo-seccion">El Alma detrás de este espacio</h2>
-            <p>¡Hola! Soy la creadora de Alma Serena. Mi misión es facilitarte herramientas y conocimientos ancestrales para que limpies tus bloqueos energéticos, abras tus caminos hacia la abundancia y conectes con la magia que ya habita en ti.</p>
+            <p>¡Hola! Soy la creador de Alma Serena. Mi misión es facilitarte herramientas y conocimientos ancestrales para que limpies tus bloqueos energéticos, abras tus caminos hacia la abundancia y conectes con la magia que ya habita en ti.</p>
         </div>
     </section>
 
-    <!-- Testimonios -->
     <section class="testimonios">
         <h2 class="titulo-seccion">Almas que ya transformaron su energía</h2>
         <div class="grid-testimonios">
@@ -302,46 +419,68 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="faq">
         <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
         <div class="faq-item">
             <h4>¿Cómo recibo mi acceso?</h4>
-            <p>Inmediatamente después del pago, recibirás un correo de Hotmart con tu enlace de descarga o acceso a la plataforma de estudios.</p>
+            <p>Inmediatamente después del pago de un producto digital estándar, recibirás un correo de Hotmart con tu enlace de descarga o acceso. Para ebooks personalizados bajo pedido, el tiempo de entrega y el canal se acordarán de forma directa.</p>
         </div>
         <div class="faq-item">
             <h4>¿Es seguro el pago?</h4>
-            <p>Sí, todos los pagos están cifrados y respaldados por la tecnología de seguridad global de Hotmart.</p>
+            <p>Sí, todos los pagos estándar están cifrados y respaldados por la tecnología de seguridad global de Hotmart. Los servicios personalizados se coordinan directamente para tu mayor comodidad.</p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Alma Serena. Todos los derechos reservados.</p>
         <div style="margin: 15px 0;">
-            <a href="#">Instagram</a> | <a href="#">TikTok</a> | <a href="https://wa.me/TU_NUMERO_DE_WHATSAPP">Contacto</a>
+            <button onclick="abrirModal('modal-privacidad')">Política de Privacidad</button> | 
+            <button onclick="abrirModal('modal-terminos')">Términos y Condiciones</button> | 
+            <a href="https://wa.me/TU_NUMERO_DE_WHATSAPP" target="_blank">Contacto</a>
         </div>
-        <p class="aviso-legal">Este sitio no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc. Todas las compras son procesadas de manera segura a través de la plataforma Hotmart.</p>
+        <p class="aviso-legal">Este sitio no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc. Todas las compras estándar son procesadas de manera segura a través de la plataforma Hotmart.</p>
     </footer>
 
-    <!-- WhatsApp Flotante (Reemplaza TU_NUMERO por el tuyo con código de país, ej: 549...) -->
+    <div id="modal-privacidad" class="modal">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarModal('modal-privacidad')">&times;</button>
+            <h3>Política de Privacidad</h3>
+            <p>En Alma Serena nos tomamos muy en serio la protección de tus datos personales. Esta política detalla cómo manejamos la información que decides compartir con nosotros.</p>
+            <h5>1. Datos Recopilados</h5>
+            <p>Únicamente recopilamos los datos que nos proporcionas voluntariamente al contactarnos vía WhatsApp o a través de nuestros procesadores de pago afiliados (como tu nombre, país y correo electrónico) con el fin exclusivo de entregarte el servicio solicitado.</p>
+            <h5>2. Uso de la Información</h5>
+            <p>Tus datos se utilizan para la correcta personalización y entrega de los ebooks a pedido, procesamiento de consultas y envío de las guías digitales obtenidas.</p>
+            <h5>3. Seguridad</h5>
+            <p>Garantizamos que no vendemos, transferimos ni distribuimos tus datos personales a terceros sin tu consentimiento explícito, salvo requerimientos legales o técnicos indispensables para procesar transacciones seguras (Hotmart).</p>
+        </div>
+    </div>
+
+    <div id="modal-terminos" class="modal">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarModal('modal-terminos')">&times;</button>
+            <h3>Términos y Condiciones</h3>
+            <p>Al navegar y hacer uso de este sitio web, aceptas cumplir con los siguientes términos y regulaciones establecidos por Alma Serena.</p>
+            <h5>1. Servicios y Ebooks a Pedido</h5>
+            <p>Ofrecemos un servicio exclusivo de elaboración de ebooks personalizados. El valor de este servicio no es fijo; varía y dependerá directamente de la temática solicitada por el cliente, el nivel de complejidad conceptual y la cantidad total de páginas requeridas. El presupuesto definitivo se establecerá y confirmará antes de comenzar la redacción.</p>
+            <h5>2. Propiedad Intelectual</h5>
+            <p>Todo el contenido presente en este sitio, así como las guías y ebooks distribuidos, son propiedad exclusiva de Alma Serena. Queda estrictamente prohibida su copia, reventa, distribución masiva o uso comercial no autorizado sin previo consentimiento por escrito.</p>
+            <h5>3. Deslinde de Responsabilidad (Disclaimer)</h5>
+            <p>Las herramientas, conocimientos ancestrales, rituales y orientaciones compartidos en este espacio tienen una finalidad educativa, espiritual y de crecimiento estrictamente personal. No sustituyen bajo ninguna circunstancia el diagnóstico, asesoramiento o tratamiento médico, psicológico o profesional adecuado.</p>
+        </div>
+    </div>
+
     <a href="https://wa.me/TU_NUMERO" class="whatsapp-float" target="_blank">💬</a>
 
-    <!-- SCRIPT ADMINISTRADOR: Carga tus 10 productos -->
     <script>
-        // ESTA ES TU BASE DE DATOS MANUAL MIENTRAS TANTO.
-        // Puedes agregar todos los productos que quieras aquí abajo siguiendo el mismo formato.
+        // Base de datos de productos filtrada y actualizada
         const productos = [
-            { icono: "👁️", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", link: "#" },
-            { icono: "💎", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", link: "#" },
-            { icono: "✨", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", link: "#" },
-            { icono: "🌙", nombre: "Baños de Luna", desc: "Rituales de reconexión y magnetismo personal aprovechando las fases lunares.", precio: "29", link: "#" },
-            { icono: "🃏", nombre: "Iniciación al Tarot", desc: "Aprende a leer los arcanos mayores desde cero y confía en tu intuición.", precio: "69", link: "#" },
-            { icono: "🌿", nombre: "Herboristería Mística", desc: "Guía práctica para usar plantas, sahumerios y aceites en tus espacios.", precio: "34", link: "#" },
-            { icono: "🔮", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", link: "#" },
-            { icono: "🧘", nombre: "Alineación de Chakras", desc: "Meditaciones guiadas y frecuencias para desbloquear tus centros de energía.", precio: "19", link: "#" },
-            { icono: "✍️", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", link: "#" },
-            { icono: "🦅", nombre: "Animales de Poder", desc: "Descubre tu guía totémico animal y aprende a invocar su medicina espiritual.", precio: "39", link: "#" }
+            { icono: "👁️", nombre: "Limpiezas Energéticas", desc: "Ritual de Volteo y Descarga. Liberación de envidias, bloqueos y estancamiento.", precio: "39", esVariable: false, link: "#" },
+            { icono: "💎", nombre: "Apertura de Caminos", desc: "Kit digital para desbloquear el flujo de dinero, prosperidad y éxito laboral.", precio: "49", esVariable: false, link: "#" },
+            { icono: "✨", nombre: "Alta Magia", desc: "Guía de Conexión Espiritual. Rituales con entidades y lectura sagrada de velas.", precio: "59", esVariable: false, link: "#" },
+            { icono: "🔮", nombre: "Protección Áurica", desc: "Amuletos, decretos y escudos energéticos para protegerte de bajas vibraciones.", precio: "45", esVariable: false, link: "#" },
+            { icono: "✍️", nombre: "Ebook: Bitácora de Manifestación", desc: "Ejercicios diarios de escritura para reprogramar tu mente hacia la abundancia.", precio: "15", esVariable: false, link: "#" },
+            // NUEVO SERVICIO INTEGRADO Y PERSONALIZADO
+            { icono: "📚", nombre: "Ebooks a Pedido", desc: "Creamos ebooks personalizados en base al tema y páginas que solicites. El precio final varía según la complejidad temática y cantidad de páginas.", precio: "Variable", esVariable: true, link: "https://wa.me/TU_NUMERO?text=Hola!%20Me%20gustaría%20solicitar%20un%20Ebook%20a%20pedido." }
         ];
 
         const contenedor = document.getElementById('productos-lista');
@@ -349,6 +488,11 @@
         productos.forEach(prod => {
             const tarjeta = document.createElement('div');
             tarjeta.className = 'tarjeta-producto';
+            
+            // Lógica para mostrar precio fijo o variable de forma elegante
+            const textoPrecio = prod.esVariable ? `${prod.precio}` : `$${prod.precio} <span>USD</span>`;
+            const textoBoton = prod.esVariable ? "Solicitar Pedido" : "Comprar ahora";
+
             tarjeta.innerHTML = `
                 <div>
                     <div class="producto-icono">${prod.icono}</div>
@@ -357,13 +501,32 @@
                 </div>
                 <div>
                     <div class="producto-price-box">
-                        <div class="producto-precio">$${prod.precio} <span>USD</span></div>
+                        <div class="producto-precio">${textoPrecio}</div>
                     </div>
-                    <a href="${prod.link}" class="btn-comprar" target="_blank">Comprar ahora</a>
+                    <a href="${prod.link}" class="btn-comprar" target="_blank">${textoBoton}</a>
                 </div>
             `;
             contenedor.appendChild(tarjeta);
         });
+
+        // Funciones para controlar las Ventanas Modales de las Políticas
+        function abrirModal(idModal) {
+            document.getElementById(idModal).style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
+        }
+
+        function cerrarModal(idModal) {
+            document.getElementById(idModal).style.display = 'none';
+            document.body.style.overflow = 'auto'; // Devuelve el scroll
+        }
+
+        // Cerrar modales si se hace clic fuera del recuadro blanco
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
 </body>
 </html>
