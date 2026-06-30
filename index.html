@@ -1,174 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Alma Serena</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background: #f9fafc;
-      color: #2c3e50;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alma Serena | Despierta tu energía interior</title>
 
-    header {
-      background: #34495e;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a1a2e, #050510);
+  color: white;
+}
 
-    .logo {
-      width: 90px;
-      margin-bottom: 10px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+}
 
-    header nav a {
-      margin: 0 15px;
-      color: #ecf0f1;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
 
-    header nav a:hover {
-      text-decoration: underline;
-    }
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
 
-    main {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: #d4af37;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    section {
-      margin-bottom: 40px;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
+.btn:hover {
+  transform: scale(1.05);
+}
 
-    h2 {
-      color: #2c3e50;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+/* SECTIONS */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    ul {
-      margin-left: 20px;
-    }
+.card {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(6px);
+}
 
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
+/* VSL */
+.vsl {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .recordatorio {
-      margin-top: 25px;
-      padding: 20px;
-      background-color: #fdf6e3;
-      border-left: 6px solid #34495e;
-      font-size: 1.1em;
-      text-align: center;
-      font-weight: bold;
-      color: #2c3e50;
-    }
+.video-box {
+  background: black;
+  height: 220px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      width: 65px;
-      height: 65px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      border-radius: 50%;
-      text-align: center;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-    }
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 16px 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(37,211,102,0.6);
+  animation: pulse 1.5s infinite;
+}
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
 
-    .whatsapp-float img {
-      width: 38px;
-      margin-top: 13px;
-    }
-  </style>
+.social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social a {
+  margin: 10px;
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Logo Alma Serena" class="logo">
-    <h1>Alma Serena</h1>
-    <p>Un espacio de conexión espiritual ✨</p>
-    <nav>
-      <a href="#sobre">Sobre mí</a>
-      <a href="#rituales">Rituales</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#privacidad">Privacidad</a>
-      <a href="#terminos">Términos</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre mí</h2>
-      <p>Alma Serena es un proyecto personal donde comparto experiencias, reflexiones y acompañamiento espiritual desde la práctica consciente y respetuosa.  
-      Mi objetivo es transmitir calma, confianza y seguridad en cada proceso.</p>
-    </section>
+<!-- HERO -->
+<div class="hero">
+  <h1>🌙 Alma Serena</h1>
+  <p>Libera bloqueos emocionales, limpia tu energía y reconecta contigo mismo</p>
 
-    <section id="rituales">
-      <h2>Rituales y Acompañamiento</h2>
-      <p>🌟 Ritual de regalo disponible <strong>solo por única vez</strong>.  
-      Además, siempre tendrás mi acompañamiento para guiarte en el proceso.</p>
-      <ul>
-        <li>✨ Rituales con velas</li>
-        <li>🌿 Rituales de apertura de caminos</li>
-        <li>🧂 Baños de despojo o amargos</li>
-        <li>🍯 Baños de atracción dulces</li>
-      </ul>
-      <p><strong>Nota importante:</strong> No se realizan trabajos oscuros de ninguna índole, ya que pueden ser perjudiciales para el usuario al no estar capacitado.  
-      Estos rituales son de carácter espiritual y <strong>no reemplazan tratamientos médicos, psicológicos ni profesionales de ninguna clase</strong>.</p>
-      <div class="recordatorio">
-        QUIEN CREA EN LA MAGIA TODO RESULTA. JAMÁS NIEGUES LO QUE POR DERECHO ESPIRITUAL TE CORRESPONDE.  
-        LA MAGIA VIVE EN TI, RECUÉRDALO SIEMPRE.
-      </div>
-    </section>
+  <a class="btn" href="https://tulink-hotmart.com">Acceso inmediato</a>
+</div>
 
-    <section id="privacidad">
-      <h2>Políticas de Privacidad</h2>
-      <p>En Alma Serena respetamos tu privacidad. Los datos que compartas (como nombre, correo electrónico o mensajes) se utilizan únicamente para responderte y acompañarte en tu proceso espiritual.  
-      No se venden ni se comparten con terceros.</p>
-      <p>Podés solicitar la eliminación de tus datos en cualquier momento escribiéndonos directamente.</p>
-    </section>
+<!-- VSL -->
+<section class="vsl">
+  <h2>🔥 Descubre el método energético</h2>
+  <div class="video-box">
+    Tu video de ventas (VSL)
+  </div>
+  <p>Este contenido ha ayudado a cientos de personas a recuperar paz interior y claridad emocional.</p>
+</section>
 
-    <section id="terminos">
-      <h2>Términos y Condiciones</h2>
-      <p>El uso de este sitio implica la aceptación de los siguientes términos:</p>
-      <ul>
-        <li>Los rituales ofrecidos son de carácter espiritual y personal, basados en experiencia propia.</li>
-        <li>El ritual de regalo es único y no repetible.</li>
-        <li>El acompañamiento siempre está incluido, pero no sustituye asesoramiento médico, psicológico ni profesional.</li>
-        <li>No se realizan trabajos oscuros de ninguna índole.</li>
-        <li>El contenido del sitio puede actualizarse o modificarse sin previo aviso.</li>
-      </ul>
-    </section>
-  </main>
+<!-- PROBLEMA -->
+<section>
+  <h2>⚠️ Si te pasa esto...</h2>
 
-  <footer>
-    <p>© 2026 Alma Serena | <a href="#privacidad" style="color:white;">Privacidad</a> | <a href="#terminos" style="color:white;">Términos</a></p>
-  </footer>
+  <div class="card">• Sientes ansiedad o bloqueo emocional constante</div>
+  <div class="card">• Te cuesta avanzar en tu vida personal o amorosa</div>
+  <div class="card">• Sientes energía pesada o agotamiento mental</div>
+</section>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/5493425683418?text=Hola%20Alma%20Serena,%20quiero%20recibir%20mi%20ritual%20de%20regalo%20único%20y%20acompañamiento.%20Te%20cuento%20cuál%20quiero%20👇" class="whatsapp-float" target="_blank">
-    <img src="assets/whatsapp.png" alt="WhatsApp">
-  </a>
+<!-- SOLUCIÓN -->
+<section>
+  <h2>✨ Lo que vas a lograr</h2>
+
+  <div class="card">✔️ Liberación energética profunda</div>
+  <div class="card">✔️ Mayor claridad emocional</div>
+  <div class="card">✔️ Conexión espiritual contigo mismo</div>
+  <div class="card">✔️ Sensación de calma y equilibrio</div>
+</section>
+
+<!-- BONUS -->
+<section>
+  <h2>🎁 Bonus gratis</h2>
+
+  <div class="card">
+    Descarga un ritual básico de limpieza energética GRATIS para empezar hoy mismo.
+    <br><br>
+    <a class="btn" href="https://tulink-gratis.com">Quiero el ritual gratis</a>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="text-align:center;">
+  <h2>🚀 Empieza tu transformación hoy</h2>
+  <p>No sigas cargando energía que no es tuya.</p>
+
+  <a class="btn" href="https://tulink-hotmart.com">Acceder ahora</a>
+
+  <div class="social">
+    <p>Síguenos:</p>
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://tiktok.com">TikTok</a>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a class="whatsapp"
+   href="https://wa.me/5493425683418?text=Hola%20quiero%20info%20de%20Alma%20Serena"
+   target="_blank">
+💬
+</a>
+
 </body>
 </html>
