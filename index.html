@@ -1,187 +1,1391 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alma Serena | Despierta tu energía interior</title>
+
+<title>Alma Serena | Rituales, Energía y Transformación Interior</title>
+
+<meta name="description" content="Descubre rituales, astrología, tarot y herramientas espirituales para liberar bloqueos, atraer abundancia y recuperar tu equilibrio.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a1a2e, #050510);
-  color: white;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+html{
+scroll-behavior:smooth;
 }
 
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
+body{
+
+font-family:Poppins,sans-serif;
+
+background:#070707;
+
+color:#ffffff;
+
+overflow-x:hidden;
+
 }
 
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
+/*==========================*/
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+radial-gradient(circle at top,#5b3b00 0%,transparent 35%),
+radial-gradient(circle at bottom,#1b1b1b 0%,transparent 50%);
+
+opacity:.35;
+
+pointer-events:none;
+
+z-index:-2;
+
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 22px;
-  border-radius: 30px;
-  background: #d4af37;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+/*==========================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.30);
+
+backdrop-filter:blur(14px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(212,175,55,.15);
+
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.logo{
+
+font-family:Cinzel,serif;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#D4AF37;
+
+letter-spacing:2px;
+
 }
 
-/* SECTIONS */
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:30px;
+
+font-size:15px;
+
+transition:.4s;
+
 }
 
-.card {
-  background: rgba(255,255,255,0.06);
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  backdrop-filter: blur(6px);
+nav a:hover{
+
+color:#D4AF37;
+
 }
 
-/* VSL */
-.vsl {
-  text-align: center;
-  padding: 40px 20px;
+/*==========================*/
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:120px 25px;
+
+position:relative;
+
+overflow:hidden;
+
+background:url("hero-alma-serena.jpg") center center/cover no-repeat;
+
 }
 
-.video-box {
-  background: black;
-  height: 220px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.75));
+
 }
 
-/* WHATSAPP FLOAT BUTTON */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 16px 18px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px rgba(37,211,102,0.6);
-  animation: pulse 1.5s infinite;
+/*==========================*/
+
+.hero-content{
+
+position:relative;
+
+z-index:5;
+
+max-width:900px;
+
+animation:fadeHero 1.4s ease;
+
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+.hero h1{
+
+font-family:Cinzel,serif;
+
+font-size:64px;
+
+line-height:1.2;
+
+margin-bottom:20px;
+
+color:#F4D47A;
+
+text-shadow:0 0 30px rgba(212,175,55,.25);
+
 }
 
-.social {
-  text-align: center;
-  margin-top: 20px;
+.hero p{
+
+font-size:22px;
+
+line-height:1.8;
+
+max-width:760px;
+
+margin:auto;
+
+color:#ECECEC;
+
 }
 
-.social a {
-  margin: 10px;
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: bold;
+/*==========================*/
+
+.hero-badge{
+
+display:inline-block;
+
+margin-bottom:35px;
+
+padding:10px 22px;
+
+border-radius:50px;
+
+background:rgba(212,175,55,.12);
+
+border:1px solid rgba(212,175,55,.35);
+
+color:#F4D47A;
+
+font-size:14px;
+
+letter-spacing:1px;
+
 }
+
+/*==========================*/
+
+.cta-group{
+
+margin-top:45px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 38px;
+
+border-radius:50px;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+font-size:18px;
+
+}
+
+.btn-gold{
+
+background:linear-gradient(45deg,#d4af37,#f7d777);
+
+color:#111;
+
+box-shadow:0 0 35px rgba(212,175,55,.35);
+
+}
+
+.btn-gold:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 45px rgba(212,175,55,.65);
+
+}
+
+.btn-dark{
+
+border:2px solid #D4AF37;
+
+color:#fff;
+
+}
+
+.btn-dark:hover{
+
+background:#D4AF37;
+
+color:#111;
+
+}
+
+/*==========================*/
+
+.stats{
+
+margin-top:55px;
+
+display:flex;
+
+justify-content:center;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.stat{
+
+text-align:center;
+
+}
+
+.stat h3{
+
+font-size:34px;
+
+color:#F7D777;
+
+}
+
+.stat span{
+
+font-size:15px;
+
+opacity:.8;
+
+}
+
+/*==========================*/
+
+.scroll{
+
+position:absolute;
+
+bottom:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:13px;
+
+letter-spacing:3px;
+
+opacity:.7;
+
+animation:float 2s infinite;
+
+}
+
+/*==========================*/
+
+section{
+
+padding:90px 8%;
+
+}
+
+/*==========================*/
+
+@keyframes fadeHero{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,10px);
+
+}
+
+100%{
+
+transform:translate(-50%,0);
+
+}
+
+}
+
+/*==========================*/
+
+@media(max-width:900px){
+
+header{
+
+padding:18px 25px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.stats{
+
+gap:25px;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>🌙 Alma Serena</h1>
-  <p>Libera bloqueos emocionales, limpia tu energía y reconecta contigo mismo</p>
+<header>
 
-  <a class="btn" href="https://tulink-hotmart.com">Acceso inmediato</a>
+<div class="logo">
+
+ALMA SERENA
+
 </div>
 
-<!-- VSL -->
-<section class="vsl">
-  <h2>🔥 Descubre el método energético</h2>
-  <div class="video-box">
-    Tu video de ventas (VSL)
-  </div>
-  <p>Este contenido ha ayudado a cientos de personas a recuperar paz interior y claridad emocional.</p>
-</section>
+<nav>
 
-<!-- PROBLEMA -->
-<section>
-  <h2>⚠️ Si te pasa esto...</h2>
+<a href="#beneficios">Beneficios</a>
 
-  <div class="card">• Sientes ansiedad o bloqueo emocional constante</div>
-  <div class="card">• Te cuesta avanzar en tu vida personal o amorosa</div>
-  <div class="card">• Sientes energía pesada o agotamiento mental</div>
-</section>
+<a href="#metodo">Método</a>
 
-<!-- SOLUCIÓN -->
-<section>
-  <h2>✨ Lo que vas a lograr</h2>
+<a href="#testimonios">Testimonios</a>
 
-  <div class="card">✔️ Liberación energética profunda</div>
-  <div class="card">✔️ Mayor claridad emocional</div>
-  <div class="card">✔️ Conexión espiritual contigo mismo</div>
-  <div class="card">✔️ Sensación de calma y equilibrio</div>
-</section>
+<a href="#faq">Preguntas</a>
 
-<!-- BONUS -->
-<section>
-  <h2>🎁 Bonus gratis</h2>
+</nav>
 
-  <div class="card">
-    Descarga un ritual básico de limpieza energética GRATIS para empezar hoy mismo.
-    <br><br>
-    <a class="btn" href="https://tulink-gratis.com">Quiero el ritual gratis</a>
-  </div>
-</section>
+</header>
 
-<!-- CTA FINAL -->
-<section style="text-align:center;">
-  <h2>🚀 Empieza tu transformación hoy</h2>
-  <p>No sigas cargando energía que no es tuya.</p>
+<section class="hero">
 
-  <a class="btn" href="https://tulink-hotmart.com">Acceder ahora</a>
+<div class="hero-content">
 
-  <div class="social">
-    <p>Síguenos:</p>
-    <a href="https://instagram.com">Instagram</a>
-    <a href="https://tiktok.com">TikTok</a>
-  </div>
-</section>
+<div class="hero-badge">
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<a class="whatsapp"
-   href="https://wa.me/5493425683418?text=Hola%20quiero%20info%20de%20Alma%20Serena"
-   target="_blank">
-💬
+✨ RITUALES • ENERGÍA • ASTROLOGÍA • TAROT ✨
+
+</div>
+
+<h1>
+
+Despierta tu Energía Interior y Comienza una Nueva Etapa de Transformación
+
+</h1>
+
+<p>
+
+Aprende rituales, técnicas energéticas y herramientas espirituales para liberar bloqueos, atraer abundancia, fortalecer tu bienestar emocional y reconectar con tu esencia desde la comodidad de tu hogar.
+
+</p>
+
+<div class="cta-group">
+
+<a class="btn btn-gold"
+href="TU-LINK-DE-HOTMART">
+
+🌙 ACCEDER AHORA
+
 </a>
 
+<a class="btn btn-dark"
+href="https://wa.me/5493425683418?text=Hola%20Alma%20Serena,%20quiero%20información.">
+
+💬 HABLAR POR WHATSAPP
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h3>24/7</h3>
+
+<span>Acceso inmediato</span>
+
+</div>
+
+<div class="stat">
+
+<h3>100%</h3>
+
+<span>Online</span>
+
+</div>
+
+<div class="stat">
+
+<h3>+1000</h3>
+
+<span>Personas acompañadas</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll">
+
+▼ DESLIZA ▼
+
+</div>
+
+</section>
+
+<!-- ====== CONTINÚA EN LA PARTE 2 ====== -->
+  <!-- ========================= -->
+<!-- BENEFICIOS -->
+<!-- ========================= -->
+
+<section id="beneficios">
+
+<div style="text-align:center;max-width:900px;margin:auto;">
+
+<h2 style="font-family:Cinzel,serif;font-size:42px;color:#D4AF37;margin-bottom:20px;">
+
+¿Por qué elegir Alma Serena?
+
+</h2>
+
+<p style="font-size:18px;color:#d8d8d8;line-height:1.8;margin-bottom:60px;">
+
+Cada herramienta fue creada para ayudarte a recuperar el equilibrio emocional, fortalecer tu energía y avanzar con mayor confianza en tu camino personal.
+
+</p>
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
+
+<div class="card">
+
+<h3>🌙 Limpieza Energética</h3>
+
+<p>
+
+Aprende prácticas sencillas para liberar cargas emocionales y renovar tu energía.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>✨ Rituales Guiados</h3>
+
+<p>
+
+Rituales prácticos para abundancia, protección, armonía y bienestar.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔮 Astrología y Tarot</h3>
+
+<p>
+
+Herramientas para comprender tus ciclos y tomar decisiones con mayor claridad.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💛 Amor Propio</h3>
+
+<p>
+
+Ejercicios para fortalecer tu autoestima y conectar contigo mismo.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🕯️ Velas e Intención</h3>
+
+<p>
+
+Aprende a utilizar velas y decretos de manera consciente.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌟 Prosperidad</h3>
+
+<p>
+
+Hábitos y prácticas para abrirte a nuevas oportunidades.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROBLEMA -->
+<!-- ========================= -->
+
+<section style="background:#101010;">
+
+<div style="max-width:1000px;margin:auto;text-align:center;">
+
+<h2 style="font-family:Cinzel,serif;font-size:42px;color:#D4AF37;">
+
+¿Te sientes identificado con alguna de estas situaciones?
+
+</h2>
+
+</div>
+
+<div style="margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;">
+
+<div class="card">
+
+😔 Sientes ansiedad o estrés constante.
+
+</div>
+
+<div class="card">
+
+💔 Hay situaciones que parecen repetirse una y otra vez.
+
+</div>
+
+<div class="card">
+
+⚡ Percibes cansancio emocional o mental.
+
+</div>
+
+<div class="card">
+
+🌑 Sientes que has perdido la motivación.
+
+</div>
+
+<div class="card">
+
+🙏 Buscas reconectar con tu espiritualidad.
+
+</div>
+
+<div class="card">
+
+🌞 Quieres comenzar una nueva etapa en tu vida.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- MÉTODO -->
+<!-- ========================= -->
+
+<section id="metodo">
+
+<div style="text-align:center;max-width:900px;margin:auto;">
+
+<h2 style="font-family:Cinzel,serif;font-size:42px;color:#D4AF37;">
+
+¿Cómo funciona?
+
+</h2>
+
+<p style="margin-top:25px;font-size:18px;color:#dddddd;">
+
+Todo el contenido está organizado para que puedas avanzar paso a paso, desde cualquier dispositivo y a tu propio ritmo.
+
+</p>
+
+</div>
+
+<div style="margin-top:70px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;">
+
+<div class="card">
+
+<h3>① Compra</h3>
+
+<p>
+
+Realiza tu compra de forma segura mediante Hotmart.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>② Acceso</h3>
+
+<p>
+
+Recibes el acceso automáticamente en tu correo electrónico.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>③ Aprende</h3>
+
+<p>
+
+Comienza inmediatamente desde tu celular o computadora.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>④ Aplica</h3>
+
+<p>
+
+Pon en práctica las herramientas y disfruta del proceso.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- IMAGEN -->
+<!-- ========================= -->
+
+<section>
+
+<div style="max-width:900px;margin:auto;text-align:center;">
+
+<img
+src="logo-alma-serena.jpg"
+style="width:100%;max-width:500px;border-radius:20px;box-shadow:0 0 35px rgba(212,175,55,.25);">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- BONUS -->
+<!-- ========================= -->
+
+<section style="background:#101010;">
+
+<div style="max-width:950px;margin:auto;">
+
+<h2 style="text-align:center;font-family:Cinzel,serif;font-size:42px;color:#D4AF37;">
+
+Bonos Especiales
+
+</h2>
+
+<div style="margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
+
+<div class="card">
+
+🎁 Ritual de limpieza energética.
+
+</div>
+
+<div class="card">
+
+🎁 Guía básica de decretos positivos.
+
+</div>
+
+<div class="card">
+
+🎁 Calendario de fases lunares.
+
+</div>
+
+<div class="card">
+
+🎁 Meditación guiada para relajación.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TESTIMONIOS -->
+<!-- ========================= -->
+
+<section id="testimonios">
+
+<div style="text-align:center;">
+
+<h2 style="font-family:Cinzel,serif;font-size:42px;color:#D4AF37;">
+
+Lo que dicen nuestros alumnos
+
+</h2>
+
+</div>
+
+<div style="margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
+
+<div class="card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"El contenido es claro y pude incorporar nuevas prácticas a mi rutina."
+
+</p>
+
+<strong>María G.</strong>
+
+</div>
+
+<div class="card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"Encontré herramientas que me ayudaron a organizar mejor mis momentos de introspección."
+
+</p>
+
+<strong>Andrea G.</strong>
+
+</div>
+
+<div class="card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"La plataforma es muy sencilla y el acceso fue inmediato."
+
+</p>
+
+<strong>Carolina G.</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GARANTÍA -->
+<!-- ========================= -->
+
+<section style="background:#101010;text-align:center;">
+
+<h2 style="font-family:Cinzel,serif;font-size:40px;color:#D4AF37;">
+
+Compra con tranquilidad
+
+</h2>
+
+<p style="margin-top:30px;font-size:19px;line-height:1.9;max-width:850px;margin-left:auto;margin-right:auto;">
+
+Tu compra se realiza a través de <strong>Hotmart</strong>, una plataforma reconocida internacionalmente que ofrece un proceso de pago seguro y aplica la garantía correspondiente según las condiciones del producto.
+
+</p>
+
+</section>
+
+<style>
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(212,175,55,.18);
+
+padding:30px;
+
+border-radius:18px;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#D4AF37;
+
+box-shadow:0 0 30px rgba(212,175,55,.20);
+
+}
+
+.card h3{
+
+color:#F4D47A;
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#dddddd;
+
+}
+
+</style>
+
+<!-- ===== CONTINÚA EN LA PARTE 3 ===== -->
+  <!-- =================================== -->
+<!-- PREGUNTAS FRECUENTES -->
+<!-- =================================== -->
+
+<section id="faq">
+
+<div style="max-width:900px;margin:auto;">
+
+<h2 style="text-align:center;font-family:Cinzel,serif;font-size:42px;color:#D4AF37;margin-bottom:50px;">
+
+Preguntas Frecuentes
+
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<button class="faq-question">¿Cómo recibo el acceso?</button>
+<div class="faq-answer">
+<p>Después de completar el pago recibirás automáticamente un correo con las instrucciones para acceder al contenido.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿Necesito experiencia previa?</button>
+<div class="faq-answer">
+<p>No. Todo el contenido está explicado paso a paso para que cualquier persona pueda comenzar.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿Puedo verlo desde el celular?</button>
+<div class="faq-answer">
+<p>Sí. Puedes acceder desde celular, tablet o computadora las 24 horas.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿El acceso es inmediato?</button>
+<div class="faq-answer">
+<p>Sí. Una vez confirmado el pago podrás ingresar inmediatamente.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =================================== -->
+<!-- CTA FINAL -->
+<!-- =================================== -->
+
+<section style="text-align:center;background:linear-gradient(180deg,#101010,#070707);">
+
+<h2 style="font-family:Cinzel,serif;font-size:52px;color:#F7D777;">
+
+Tu transformación comienza hoy.
+
+</h2>
+
+<p style="font-size:20px;max-width:750px;margin:30px auto;color:#ddd;line-height:1.8;">
+
+Cada cambio empieza con una decisión. Si deseas incorporar nuevas herramientas para tu bienestar y crecimiento personal, este es un buen momento para comenzar.
+
+</p>
+
+<a href="TU-LINK-DE-HOTMART" class="btn btn-gold">
+
+✨ QUIERO COMENZAR AHORA
+
+</a>
+
+</section>
+
+<!-- =================================== -->
+<!-- FOOTER -->
+<!-- =================================== -->
+
+<footer>
+
+<h3>Alma Serena</h3>
+
+<p>
+
+Rituales • Astrología • Tarot • Espiritualidad
+
+</p>
+
+<p>
+
+WhatsApp
+
+<br><br>
+
+<a href="https://wa.me/5493425683418">
+
++54 9 3425 68 3418
+
+</a>
+
+</p>
+
+<p style="margin-top:25px;">
+
+© 2026 Alma Serena
+
+</p>
+
+</footer>
+
+<!-- =================================== -->
+<!-- BOTÓN WHATSAPP -->
+<!-- =================================== -->
+
+<a class="whatsapp"
+
+href="https://wa.me/5493425683418?text=Hola%20Alma%20Serena,%20quiero%20más%20información."
+
+target="_blank">
+
+💬
+
+</a>
+
+<!-- =================================== -->
+<!-- BARRA MÓVIL -->
+<!-- =================================== -->
+
+<div class="mobile-bar">
+
+<a href="TU-LINK-DE-HOTMART">
+
+🌙 ACCEDER AHORA
+
+</a>
+
+</div>
+
+<!-- =================================== -->
+<!-- CONTADOR -->
+<!-- =================================== -->
+
+<div id="online">
+
+🔥 <span id="contador"></span> personas están viendo esta página.
+
+</div>
+
+<style>
+
+.faq-item{
+
+margin-bottom:18px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:14px;
+
+overflow:hidden;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+.faq-question{
+
+width:100%;
+
+padding:22px;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:18px;
+
+text-align:left;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.faq-answer{
+
+display:none;
+
+padding:0 22px 22px;
+
+color:#ddd;
+
+line-height:1.8;
+
+}
+
+footer{
+
+padding:70px 20px;
+
+text-align:center;
+
+background:#050505;
+
+}
+
+footer h3{
+
+font-family:Cinzel;
+
+font-size:34px;
+
+color:#D4AF37;
+
+margin-bottom:15px;
+
+}
+
+footer a{
+
+color:#D4AF37;
+
+text-decoration:none;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+right:20px;
+
+bottom:90px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+text-decoration:none;
+
+box-shadow:0 0 25px rgba(37,211,102,.5);
+
+animation:pulse 2s infinite;
+
+z-index:9999;
+
+}
+
+.mobile-bar{
+
+position:fixed;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+background:#D4AF37;
+
+padding:18px;
+
+text-align:center;
+
+display:none;
+
+z-index:999;
+
+}
+
+.mobile-bar a{
+
+color:#111;
+
+font-weight:bold;
+
+font-size:20px;
+
+text-decoration:none;
+
+}
+
+#online{
+
+position:fixed;
+
+left:20px;
+
+bottom:20px;
+
+padding:12px 18px;
+
+background:rgba(0,0,0,.7);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:40px;
+
+backdrop-filter:blur(8px);
+
+font-size:14px;
+
+}
+
+@media(max-width:900px){
+
+.mobile-bar{
+
+display:block;
+
+}
+
+#online{
+
+display:none;
+
+}
+
+.whatsapp{
+
+bottom:90px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+const numero=document.getElementById("contador");
+
+numero.innerHTML=Math.floor(Math.random()*18)+14;
+
+document.querySelectorAll(".faq-question").forEach(btn=>{
+
+btn.onclick=function(){
+
+const respuesta=this.nextElementSibling;
+
+const abierta=respuesta.style.display==="block";
+
+document.querySelectorAll(".faq-answer").forEach(a=>a.style.display="none");
+
+if(!abierta){
+
+respuesta.style.display="block";
+
+}
+
+}
+
+});
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".card").forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<window.innerHeight-80){
+
+card.style.opacity="1";
+
+card.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition=".8s";
+
+});
+
+</script>
+
 </body>
+
 </html>
