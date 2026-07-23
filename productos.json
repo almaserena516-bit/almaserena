@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ritual de Constelaciones Familiares",
+    "categoria": "Constelaciones Familiares",
+    "precio": 25,
+    "imagen": "https://picsum.photos/seed/constelaciones/400/400",
+    "descripcion": "Sana los vínculos familiares y libera cargas heredadas."
+  },
+  {
+    "id": 2,
+    "nombre": "Ritual de Abundancia Dorada",
+    "categoria": "Prosperidad y Abundancia",
+    "precio": 20,
+    "imagen": "https://picsum.photos/seed/abundancia/400/400",
+    "descripcion": "Atrae prosperidad y abre caminos económicos."
+  },
+  {
+    "id": 3,
+    "nombre": "Vela Ritualizada de Protección",
+    "categoria": "Velas Ritualizadas",
+    "precio": 15,
+    "imagen": "https://picsum.photos/seed/vela/400/400",
+    "descripcion": "Vela cargada energéticamente para protección del hogar."
+  },
+  {
+    "id": 4,
+    "nombre": "Baño Espiritual de Limpieza",
+    "categoria": "Baños Espirituales",
+    "precio": 18,
+    "imagen": "https://picsum.photos/seed/bano/400/400",
+    "descripcion": "Ritual de limpieza energética con hierbas sagradas."
+  },
+  {
+    "id": 5,
+    "nombre": "Escudo de Protección Energética",
+    "categoria": "Protección",
+    "precio": 22,
+    "imagen": "https://picsum.photos/seed/proteccion/400/400",
+    "descripcion": "Protege tu energía de influencias negativas."
+  },
+  {
+    "id": 6,
+    "nombre": "Curso de Desarrollo Personal",
+    "categoria": "Desarrollo Personal",
+    "precio": 30,
+    "imagen": "https://picsum.photos/seed/desarrollo/400/400",
+    "descripcion": "Herramientas prácticas para tu crecimiento interior."
+  },
+  {
+    "id": 7,
+    "nombre": "Guía de Espiritualidad Cotidiana",
+    "categoria": "Espiritualidad",
+    "precio": 16,
+    "imagen": "https://picsum.photos/seed/espiritualidad/400/400",
+    "descripcion": "Prácticas diarias para conectar con tu esencia."
+  },
+  {
+    "id": 8,
+    "nombre": "Ritual del Anillo de Poder",
+    "categoria": "Ritual del Anillo de Poder",
+    "precio": 28,
+    "imagen": "https://picsum.photos/seed/anillo/400/400",
+    "descripcion": "Ritual para potenciar tu voluntad y manifestación."
+  }
+]
