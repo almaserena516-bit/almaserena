@@ -1,6 +1,6 @@
 /* ==========================================================================
    ALMA SERENA - CATALOGO (js/catalogo.js)
-   Carga productos.json y los muestra en #productos
+   Carga productos.json y los muestra en #productos, con botón de compra
    ========================================================================== */
 
 let todosLosProductos = [];
@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${p.nombre}</h3>
                 <p>${p.descripcion}</p>
                 <span class="precio">$${p.precio}</span>
+                <a href="${p.link}" target="_blank" class="btnGold" style="display:inline-block;margin-top:10px;">Comprar</a>
             `;
             contenedor.appendChild(card);
         });
