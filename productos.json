@@ -5,7 +5,8 @@
     "categoria": "Constelaciones Familiares",
     "precio": 25,
     "imagen": "https://picsum.photos/seed/constelaciones/400/400",
-    "descripcion": "Sana los vínculos familiares y libera cargas heredadas."
+    "descripcion": "Sana los vínculos familiares y libera cargas heredadas.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "categoria": "Prosperidad y Abundancia",
     "precio": 20,
     "imagen": "https://picsum.photos/seed/abundancia/400/400",
-    "descripcion": "Atrae prosperidad y abre caminos económicos."
+    "descripcion": "Atrae prosperidad y abre caminos económicos.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "categoria": "Velas Ritualizadas",
     "precio": 15,
     "imagen": "https://picsum.photos/seed/vela/400/400",
-    "descripcion": "Vela cargada energéticamente para protección del hogar."
+    "descripcion": "Vela cargada energéticamente para protección del hogar.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "categoria": "Baños Espirituales",
     "precio": 18,
     "imagen": "https://picsum.photos/seed/bano/400/400",
-    "descripcion": "Ritual de limpieza energética con hierbas sagradas."
+    "descripcion": "Ritual de limpieza energética con hierbas sagradas.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "categoria": "Protección",
     "precio": 22,
     "imagen": "https://picsum.photos/seed/proteccion/400/400",
-    "descripcion": "Protege tu energía de influencias negativas."
+    "descripcion": "Protege tu energía de influencias negativas.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "categoria": "Desarrollo Personal",
     "precio": 30,
     "imagen": "https://picsum.photos/seed/desarrollo/400/400",
-    "descripcion": "Herramientas prácticas para tu crecimiento interior."
+    "descripcion": "Herramientas prácticas para tu crecimiento interior.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "categoria": "Espiritualidad",
     "precio": 16,
     "imagen": "https://picsum.photos/seed/espiritualidad/400/400",
-    "descripcion": "Prácticas diarias para conectar con tu esencia."
+    "descripcion": "Prácticas diarias para conectar con tu esencia.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "categoria": "Ritual del Anillo de Poder",
     "precio": 28,
     "imagen": "https://picsum.photos/seed/anillo/400/400",
-    "descripcion": "Ritual para potenciar tu voluntad y manifestación."
+    "descripcion": "Ritual para potenciar tu voluntad y manifestación.",
+    "link": "https://pay.hotmart.com/EJEMPLO123"
   }
 ]
