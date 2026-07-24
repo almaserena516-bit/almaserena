@@ -78,5 +78,13 @@
     "imagen": "https://hotmart.s3.amazonaws.com/product_pictures/471030ec-f052-451a-a600-5dd3f4e986c9/IMG20240629WA0000.jpg",
     "descripcion": "Formación 100% online de constelaciones familiares para sanar vínculos con personas, trabajo, dinero y salud.",
     "link": "https://go.hotmart.com/Y106865360F"
+  },{
+    "id": 10,
+    "nombre": "Constelaciones Familiares - Ebook",
+    "categoria": "Constelaciones Familiares",
+    "precio": 250,
+    "imagen": "https://hotmart.s3.amazonaws.com/product_pictures/70b3bd40-f2ea-4a63-bc84-8226681e5b82/1000038677.jpg",
+    "descripcion": "Ebook sobre constelaciones familiares que ayuda a visibilizar tensiones y conflictos familiares para sanarlos.",
+    "link": "https://go.hotmart.com/S106865570M"
   }
 ]
