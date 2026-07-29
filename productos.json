@@ -110,5 +110,13 @@
     "imagen": "https://hotmart.s3.amazonaws.com/product_pictures/356a3a8e-3081-4413-bbc2-4bcaff005d68/MasterSello.jpg",
     "descripcion": "Curso de constelaciones familiares para liberarte de deudas y reconectar con la abundancia y prosperidad.",
     "link": "https://go.hotmart.com/B106865872H"
+  },{
+    "id": 14,
+    "nombre": "PACK Rompiendo Cadenas",
+    "categoria": "Constelaciones Familiares",
+    "precio": 23.50,
+    "imagen": "img/rompiendo-cadenas.png",
+    "descripcion": "Una guía profunda para sanar tu linaje, liberar patrones heredados y honrar tu legado desde la conciencia.",
+    "link": "https://go.hotmart.com/K106925937H"
   }
 ]
